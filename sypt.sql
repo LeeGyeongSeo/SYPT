@@ -51,7 +51,7 @@ CREATE TABLE `mem_quiz` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `member`
+-- Table structure for table `membmembermemberer`
 --
 
 DROP TABLE IF EXISTS `member`;
@@ -62,7 +62,7 @@ CREATE TABLE `member` (
   `id_mem` varchar(225) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
   `name_mem` varchar(50) DEFAULT NULL,
-  `gender` varchar(1) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
   `birthday` date DEFAULT NULL,
   `register_date` date DEFAULT NULL,
   PRIMARY KEY (`no_mem`)
