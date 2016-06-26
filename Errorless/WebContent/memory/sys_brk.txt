@@ -1,0 +1,13 @@
+sys_brk
+
+* Defined as a function prototype in:
+include/linux/syscalls.h, line 446
+
+* Referenced (in 7 files total) in:
+arch/xtensa/include/uapi/asm/unistd.h, line 188
+arch/alpha/kernel/osf_sys.c, line 56
+arch/arm64/include/asm/unistd32.h, line 115
+arch/ia64/kernel/sys_ia64.c, line 90
+arch/parisc/hpux/sys_hpux.c, line 43
+include/linux/syscalls.h, line 446
+include/uapi/asm-generic/unistd.h, line 587

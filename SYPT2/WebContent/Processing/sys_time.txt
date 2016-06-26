@@ -1,0 +1,10 @@
+sys_time
+
+* Defined as a function prototype in:
+include/linux/syscalls.h, line 210
+
+* Referenced (in 4 files total) in:
+arch/x86/kernel/vsyscall_64.c, line 244
+security/selinux/include/classmap.h, line 42
+include/linux/syscalls.h, line 210
+include/uapi/asm-generic/unistd.h, line 826

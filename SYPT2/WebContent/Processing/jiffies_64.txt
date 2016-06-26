@@ -1,0 +1,24 @@
+jiffies_64
+
+* Defined as a variable in:
+- include/linux/jiffies.h, line 77
+
+* Referenced (in 11 files total) in:
+- arch/x86/kernel/tsc.c, line 309
+- arch/x86/tools/relocs.c, line 70
+- arch/s390/kernel/vtime.c:
+     line 88
+     line 117
+     line 189
+- arch/frv/kernel/time.c, line 121
+- kernel/trace/trace_clock.c, line 70
+- kernel/time/timekeeping.c, line 2195
+- kernel/time/jiffies.c, line 87
+- kernel/time/timer.c:
+     line 57
+     line 59
+- drivers/net/ethernet/sun/niu.c, line 4982
+- drivers/gpu/drm/radeon/radeon_ring.c:
+     line 238
+     line 259
+- include/linux/jiffies.h, line 77

@@ -1,0 +1,31 @@
+set_intr_gate
+
+* Defined as a preprocessor macro in:
+arch/x86/include/asm/desc.h, line 371
+
+* Referenced (in 6 files total) in:
+arch/x86/lguest/boot.c, line 848
+arch/x86/kernel/traps.c:
+line 779
+line 787
+line 803
+line 807
+line 808
+line 809
+line 815
+line 816
+line 817
+line 818
+line 819
+line 820
+line 821
+line 822
+line 826
+arch/x86/kernel/irqinit.c:
+line 142
+line 202
+arch/x86/kernel/kvm.c, line 469
+arch/x86/kernel/head64.c, line 165
+arch/x86/include/asm/desc.h:
+line 371
+line 398

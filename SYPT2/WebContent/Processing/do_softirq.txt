@@ -1,0 +1,14 @@
+do_softirq
+
+* Defined as a function in:
+kernel/softirq.c, line 300
+
+* Defined as a function prototype in:
+include/linux/interrupt.h, line 419
+
+* Referenced (in 3 files total) in:
+net/core/dev.c, line 3401
+kernel/softirq.c:
+line 166
+line 300
+include/linux/interrupt.h, line 419

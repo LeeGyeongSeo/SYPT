@@ -1,0 +1,16 @@
+do_mmap_pgoff
+
+* Defined as a function in:
+mm/mmap.c, line 1260
+mm/nommu.c, line 1261
+
+* Defined as a function prototype in:
+include/linux/mm.h, line 1838
+
+* Referenced (in 6 files total) in:
+mm/mmap.c, line 1260
+mm/nommu.c, line 1261
+mm/util.c, line 265
+ipc/shm.c, line 1177
+fs/aio.c, line 438
+include/linux/mm.h, line 1838

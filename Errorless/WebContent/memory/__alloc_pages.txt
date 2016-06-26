@@ -1,0 +1,11 @@
+__alloc_pages
+
+* Defined as a function in:
+include/linux/gfp.h, line 306
+
+* Referenced (in 2 files total) in:
+mm/mempolicy.c, line 1983
+include/linux/gfp.h:
+line 306
+line 319
+line 327

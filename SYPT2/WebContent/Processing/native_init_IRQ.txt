@@ -1,0 +1,13 @@
+native_init_IRQ
+
+* Defined as a function in:
+arch/x86/kernel/irqinit.c, line 185
+
+* Defined as a function prototype in:
+arch/x86/include/asm/irq.h, line 34
+
+* Referenced (in 4 files total) in:
+arch/x86/kernel/x86_init.c, line 57
+arch/x86/kernel/irqinit.c, line 185
+arch/x86/include/asm/irq.h, line 34
+drivers/xen/events/events_base.c, line 1675

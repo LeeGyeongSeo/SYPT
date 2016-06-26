@@ -1,0 +1,9 @@
+sys_shmat
+
+* Defined as a function prototype in:
+include/linux/syscalls.h, line 667
+
+* Referenced (in 3 files total) in:
+kernel/sys_ni.c, line 87
+include/linux/syscalls.h, line 667
+include/uapi/asm-generic/unistd.h, line 545

@@ -1,0 +1,98 @@
+x86_init
+
+* Defined as a variable in:
+arch/x86/include/asm/x86_init.h, line 211
+
+* Referenced (in 34 files total) in:
+arch/x86/lguest/boot.c:
+line 1352
+line 1353
+line 1354
+arch/x86/platform/olpc/olpc.c, line 398
+arch/x86/platform/ce4100/ce4100.c:
+line 149
+line 151
+line 152
+line 153
+line 154
+line 155
+line 156
+arch/x86/platform/intel-mid/intel-mid.c:
+line 91
+line 97
+line 164
+line 165
+line 167
+line 168
+line 170
+line 172
+line 178
+line 181
+line 182
+line 190
+line 191
+arch/x86/kernel/aperture_64.c, line 384
+arch/x86/kernel/acpi/boot.c, line 1503
+arch/x86/kernel/e820.c, line 1065
+arch/x86/kernel/traps.c, line 855
+arch/x86/kernel/setup.c:
+line 948
+line 1031
+line 1175
+line 1227
+line 1239
+line 1241
+arch/x86/kernel/pci-calgary_64.c, line 1471
+arch/x86/kernel/x86_init.c, line 37
+arch/x86/kernel/irqinit.c:
+line 99
+line 190
+arch/x86/kernel/apic/apic_numachip.c, line 184
+arch/x86/kernel/apic/io_apic.c, line 2984
+arch/x86/kernel/apic/apic.c, line 1922
+arch/x86/kernel/tsc.c, line 1167
+arch/x86/kernel/smpboot.c, line 1148
+arch/x86/kernel/kvm.c, line 484
+arch/x86/kernel/pci-dma.c, line 260
+arch/x86/kernel/time.c, line 86
+arch/x86/kernel/head32.c:
+line 26
+line 27
+arch/x86/kernel/mpparse.c:
+line 64
+line 87
+line 103
+line 104
+line 227
+line 232
+line 264
+arch/x86/xen/irq.c, line 135
+arch/x86/xen/mmu.c, line 2181
+arch/x86/xen/enlighten.c:
+line 1548
+line 1550
+line 1551
+line 1552
+line 1690
+line 1716
+line 1717
+line 1834
+arch/x86/xen/time.c:
+line 517
+line 518
+line 555
+arch/x86/pci/irq.c, line 1149
+arch/x86/pci/legacy.c:
+line 63
+line 67
+arch/x86/pci/acpi.c, line 588
+arch/x86/pci/init.c:
+line 19
+line 19
+arch/x86/include/asm/mpspec.h:
+line 53
+line 58
+line 63
+arch/x86/include/asm/x86_init.h, line 211
+drivers/iommu/amd_iommu_init.c, line 2216
+drivers/iommu/dmar.c, line 848

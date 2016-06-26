@@ -1,0 +1,77 @@
+switch_to
+
+* Defined as a preprocessor macro in:
+arch/m32r/include/asm/switch_to.h, line 28
+arch/x86/include/asm/switch_to.h, line 31
+arch/x86/include/asm/switch_to.h, line 98
+arch/mn10300/include/asm/switch_to.h, line 40
+arch/s390/include/asm/switch_to.h, line 175
+arch/blackfin/include/asm/switch_to.h, line 24
+arch/blackfin/include/asm/switch_to.h, line 33
+arch/c6x/include/asm/switch_to.h, line 24
+arch/frv/include/asm/switch_to.h, line 27
+arch/arc/include/asm/switch_to.h, line 31
+arch/score/include/asm/switch_to.h, line 6
+arch/mips/include/asm/switch_to.h, line 83
+arch/sparc/include/asm/switch_to_64.h, line 20
+arch/sparc/include/asm/switch_to_32.h, line 57
+arch/avr32/include/asm/switch_to.h, line 39
+arch/arm/include/asm/switch_to.h, line 23
+arch/xtensa/include/asm/switch_to.h, line 17
+arch/tile/include/asm/switch_to.h, line 40
+arch/alpha/include/asm/switch_to.h, line 8
+arch/sh/include/asm/switch_to_64.h, line 24
+arch/sh/include/asm/switch_to_32.h, line 69
+arch/powerpc/include/asm/switch_to.h, line 13
+arch/m68k/include/asm/switch_to.h, line 30
+arch/hexagon/include/asm/switch_to.h, line 30
+arch/ia64/include/asm/switch_to.h, line 60
+arch/ia64/include/asm/switch_to.h, line 76
+arch/microblaze/include/asm/switch_to.h, line 18
+arch/parisc/include/asm/switch_to.h, line 8
+arch/cris/include/asm/switch_to.h, line 9
+arch/unicore32/include/asm/switch_to.h, line 24
+include/asm-generic/switch_to.h, line 25
+
+* Referenced (in 31 files total) in:
+arch/m32r/include/asm/switch_to.h, line 28
+arch/x86/include/asm/switch_to.h:
+line 31
+line 104
+arch/mn10300/include/asm/switch_to.h, line 40
+arch/s390/include/asm/switch_to.h, line 175
+arch/blackfin/include/asm/switch_to.h:
+line 24
+line 33
+arch/c6x/include/asm/switch_to.h, line 24
+arch/frv/include/asm/switch_to.h, line 27
+arch/arc/include/asm/switch_to.h, line 31
+arch/score/include/asm/switch_to.h, line 6
+arch/mips/include/asm/switch_to.h, line 83
+arch/sparc/include/asm/switch_to_64.h, line 20
+arch/sparc/include/asm/switch_to_32.h, line 57
+arch/avr32/include/asm/switch_to.h, line 39
+arch/arm/include/asm/switch_to.h, line 23
+arch/xtensa/include/asm/switch_to.h, line 17
+arch/tile/include/asm/switch_to.h, line 40
+arch/alpha/include/asm/switch_to.h, line 8
+arch/sh/include/asm/switch_to_64.h, line 24
+arch/sh/include/asm/switch_to_32.h, line 69
+arch/powerpc/include/asm/switch_to.h, line 13
+arch/m68k/include/asm/switch_to.h, line 30
+arch/hexagon/include/asm/switch_to.h, line 30
+arch/ia64/kernel/paravirt.c:
+line 586
+line 888
+arch/ia64/include/asm/paravirt_privop.h:
+line 103
+line 130
+arch/ia64/include/asm/switch_to.h:
+line 60
+line 76
+arch/microblaze/include/asm/switch_to.h, line 18
+arch/parisc/include/asm/switch_to.h, line 8
+arch/cris/include/asm/switch_to.h, line 9
+arch/unicore32/include/asm/switch_to.h, line 24
+kernel/sched/core.c, line 2368
+include/asm-generic/switch_to.h, line 25

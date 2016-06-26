@@ -1,0 +1,14 @@
+shm_vm_ops
+
+* Defined as a struct type in:
+ipc/shm.c, line 60
+ipc/shm.c, line 465
+
+* Referenced (in 1 files total) in:
+ipc/shm.c:
+line 60
+line 396
+line 465
+line 1271
+line 1300
+line 1310

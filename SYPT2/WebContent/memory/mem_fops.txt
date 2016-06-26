@@ -1,0 +1,9 @@
+mem_fops
+
+* Defined as a variable in:
+drivers/char/mem.c, line 715
+
+* Referenced (in 1 files total) in:
+drivers/char/mem.c:
+line 715
+line 785

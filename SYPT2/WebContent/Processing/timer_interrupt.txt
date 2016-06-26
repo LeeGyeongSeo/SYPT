@@ -1,0 +1,155 @@
+timer_interrupt
+
+* Defined as a variable in:
+arch/m68k/coldfire/sltimers.c, line 84
+arch/m68k/coldfire/timers.c, line 50
+arch/m68k/68000/timers.c, line 56
+arch/m68k/68360/config.c, line 39
+
+* Defined as a function prototype in:
+arch/frv/kernel/time.c, line 43
+arch/sparc/kernel/entry.h, line 76
+arch/sparc/include/asm/timer_32.h, line 37
+arch/xtensa/kernel/time.c, line 111
+arch/powerpc/include/asm/hw_irq.h, line 36
+arch/ia64/sn/kernel/sn2/timer_interrupt.c, line 35
+arch/parisc/kernel/irq.c, line 38
+
+* Defined as a function in:
+arch/m32r/kernel/time.c, line 112
+arch/x86/kernel/time.c, line 57
+arch/mn10300/kernel/cevt-mn10300.c, line 53
+arch/blackfin/kernel/time.c, line 121
+arch/c6x/platforms/timer64.c, line 160
+arch/frv/kernel/time.c, line 54
+arch/score/kernel/time.c, line 31
+arch/mips/loongson/common/cs5536/cs5536_mfgpt.c, line 91
+arch/mips/kernel/i8253.c, line 13
+arch/mips/bcm63xx/timer.c, line 29
+arch/sparc/kernel/time_32.c, line 95
+arch/sparc/kernel/time_64.c, line 723
+arch/avr32/kernel/time.c, line 42
+arch/arm/mach-mmp/time.c, line 75
+arch/arm/mach-davinci/time.c, line 165
+arch/xtensa/kernel/time.c, line 159
+arch/powerpc/kernel/time.c, line 527
+arch/m68k/kernel/time.c, line 41
+arch/hexagon/kernel/time.c, line 164
+arch/openrisc/kernel/time.c, line 107
+arch/ia64/kernel/time.c, line 149
+arch/microblaze/kernel/timer.c, line 162
+arch/parisc/kernel/time.c, line 58
+arch/cris/arch-v32/kernel/time.c, line 186
+arch/cris/arch-v10/kernel/time.c, line 140
+
+* Referenced (in 45 files total) in:
+arch/m32r/kernel/time.c:
+line 112
+line 136
+arch/x86/kernel/time.c:
+line 57
+line 64
+arch/mn10300/kernel/cevt-mn10300.c:
+line 53
+line 117
+arch/blackfin/kernel/time.c:
+line 121
+line 159
+arch/c6x/platforms/timer64.c:
+line 160
+line 172
+arch/frv/kernel/time.c:
+line 43
+line 46
+line 54
+arch/score/kernel/time.c:
+line 31
+line 43
+arch/mips/loongson/common/cs5536/cs5536_mfgpt.c:
+line 91
+line 112
+arch/mips/kernel/i8253.c:
+line 13
+line 21
+arch/mips/bcm63xx/timer.c:
+line 29
+line 196
+arch/sparc/kernel/time_32.c, line 95
+arch/sparc/kernel/pcic.c, line 729
+arch/sparc/kernel/entry.h, line 76
+arch/sparc/kernel/sun4d_irq.c, line 473
+arch/sparc/kernel/leon_kernel.c:
+line 290
+line 455
+arch/sparc/kernel/time_64.c, line 723
+arch/sparc/kernel/sun4m_irq.c, line 400
+arch/sparc/include/asm/timer_32.h, line 37
+arch/avr32/kernel/time.c:
+line 42
+line 60
+arch/arm/mach-mmp/time.c:
+line 75
+line 196
+arch/arm/mach-davinci/time.c:
+line 165
+line 185
+arch/xtensa/kernel/time.c:
+line 111
+line 113
+line 159
+arch/powerpc/kvm/booke.c, line 911
+arch/powerpc/kernel/ppc_ksyms_32.c, line 39
+arch/powerpc/kernel/head_booke.h, line 413
+arch/powerpc/kernel/time.c, line 527
+arch/powerpc/platforms/cell/pervasive.c, line 94
+arch/powerpc/platforms/pasemi/idle.c, line 60
+arch/powerpc/include/asm/hw_irq.h, line 36
+arch/m68k/coldfire/sltimers.c:
+line 84
+line 91
+line 141
+arch/m68k/coldfire/timers.c:
+line 50
+line 79
+line 134
+arch/m68k/kernel/time.c:
+line 41
+line 108
+arch/m68k/68000/timers.c:
+line 56
+line 66
+line 119
+arch/m68k/68360/config.c:
+line 39
+line 57
+line 99
+arch/hexagon/kernel/time.c:
+line 164
+line 176
+arch/openrisc/kernel/time.c, line 107
+arch/ia64/kernel/time.c:
+line 149
+line 382
+arch/ia64/sn/kernel/sn2/timer_interrupt.c, line 35
+arch/ia64/include/asm/machvec.h:
+line 126
+line 170
+arch/microblaze/kernel/timer.c:
+line 162
+line 174
+arch/parisc/kernel/irq.c:
+line 38
+line 557
+arch/parisc/kernel/time.c:
+line 58
+line 130
+line 149
+arch/cris/arch-v32/kernel/time.c:
+line 186
+line 221
+arch/cris/arch-v10/kernel/time.c:
+line 140
+line 175
+include/acpi/actbl3.h:
+line 306
+line 330

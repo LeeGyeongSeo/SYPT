@@ -1,0 +1,27 @@
+sys_clone
+
+* Defined as a preprocessor macro in:
+arch/arc/kernel/sys.c, line 8
+arch/tile/kernel/compat.c, line 99
+arch/tile/kernel/sys.c, line 114
+arch/openrisc/include/asm/syscalls.h, line 31
+
+* Defined as a function prototype in:
+include/linux/syscalls.h, line 828
+include/linux/syscalls.h, line 832
+include/linux/syscalls.h, line 835
+
+* Referenced (in 10 files total) in:
+arch/x86/um/sys_call_table_64.c, line 30
+arch/arc/kernel/sys.c, line 8
+arch/mips/kernel/syscall.c, line 86
+arch/xtensa/include/uapi/asm/unistd.h, line 263
+arch/tile/kernel/compat.c, line 99
+arch/tile/kernel/sys.c, line 114
+arch/arm64/include/asm/unistd32.h, line 265
+arch/openrisc/include/asm/syscalls.h, line 31
+include/linux/syscalls.h:
+line 828
+line 832
+line 835
+include/uapi/asm-generic/unistd.h, line 603

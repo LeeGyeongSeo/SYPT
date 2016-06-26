@@ -1,0 +1,147 @@
+do_page_fault
+
+* Defined as a function in:
+arch/m32r/mm/fault-nommu.c, line 69
+arch/m32r/mm/fault.c, line 74
+arch/x86/mm/fault.c, line 1285
+arch/mn10300/mm/fault.c, line 118
+arch/frv/mm/fault.c, line 32
+arch/arc/mm/fault.c, line 55
+arch/score/mm/fault.c, line 43
+arch/mips/mm/fault.c, line 321
+arch/avr32/mm/fault.c, line 56
+arch/arm/mm/fault.c, line 259
+arch/xtensa/mm/fault.c, line 37
+arch/tile/mm/fault.c, line 702
+arch/alpha/mm/fault.c, line 84
+arch/sh/mm/fault.c, line 394
+arch/arm64/mm/fault.c, line 194
+arch/powerpc/mm/fault.c, line 209
+arch/m68k/mm/fault.c, line 69
+arch/hexagon/mm/vm_fault.c, line 48
+arch/openrisc/mm/fault.c, line 49
+arch/microblaze/mm/fault.c, line 86
+arch/parisc/mm/fault.c, line 200
+arch/cris/mm/fault.c, line 53
+arch/metag/mm/fault.c, line 48
+
+* Defined as a function prototype in:
+arch/x86/include/asm/traps.h, line 75
+arch/xtensa/kernel/traps.c, line 67
+arch/tile/include/asm/traps.h, line 22
+arch/powerpc/include/asm/bug.h, line 132
+arch/m68k/kernel/sys_m68k.c, line 36
+arch/m68k/kernel/traps.c, line 125
+arch/microblaze/include/asm/pgtable.h, line 541
+arch/parisc/include/asm/traps.h, line 12
+arch/cris/arch-v10/mm/fault.c, line 31
+arch/metag/include/asm/traps.h, line 40
+
+* Referenced (in 38 files total) in:
+arch/m32r/mm/fault-nommu.c, line 69
+arch/m32r/mm/fault.c, line 74
+arch/x86/mm/fault.c:
+line 1285
+line 1302
+arch/x86/include/asm/traps.h:
+line 75
+line 81
+arch/mn10300/mm/fault.c:
+line 118
+line 138
+arch/frv/mm/fault.c:
+line 32
+line 50
+arch/arc/mm/fault.c, line 55
+arch/score/mm/fault.c, line 43
+arch/mips/mm/fault.c:
+line 205
+line 263
+line 321
+arch/avr32/mm/fault.c:
+line 56
+line 129
+arch/arm/mm/fsr-2level.c:
+line 13
+line 21
+line 53
+line 61
+arch/arm/mm/fsr-3level.c:
+line 9
+line 12
+line 13
+line 16
+line 17
+arch/arm/mm/fault.c:
+line 259
+line 398
+line 432
+arch/xtensa/mm/fault.c, line 37
+arch/xtensa/kernel/traps.c:
+line 67
+line 109
+line 112
+line 114
+line 116
+line 118
+line 121
+line 122
+arch/tile/mm/fault.c:
+line 609
+line 702
+line 801
+arch/tile/include/asm/traps.h, line 22
+arch/alpha/mm/fault.c, line 84
+arch/sh/mm/fault.c, line 394
+arch/arm64/mm/fault.c:
+line 194
+line 359
+line 386
+line 388
+line 389
+line 390
+line 392
+line 393
+line 394
+arch/powerpc/mm/fault.c, line 209
+arch/powerpc/include/asm/bug.h, line 132
+arch/m68k/mm/fault.c:
+line 69
+line 117
+arch/m68k/kernel/sys_m68k.c:
+line 36
+line 511
+arch/m68k/kernel/traps.c:
+line 125
+line 164
+line 333
+line 334
+line 474
+line 492
+line 561
+line 656
+line 751
+arch/hexagon/mm/vm_fault.c:
+line 48
+line 187
+line 194
+line 201
+arch/openrisc/mm/fault.c, line 49
+arch/microblaze/mm/fault.c, line 86
+arch/microblaze/include/asm/pgtable.h, line 541
+arch/parisc/mm/fault.c:
+line 190
+line 200
+arch/parisc/kernel/traps.c, line 810
+arch/parisc/include/asm/traps.h, line 12
+arch/cris/mm/fault.c, line 53
+arch/cris/arch-v10/mm/fault.c:
+line 31
+line 75
+line 77
+arch/metag/mm/fault.c, line 48
+arch/metag/kernel/traps.c:
+line 529
+line 568
+arch/metag/include/asm/traps.h, line 40
+tools/perf/util/sort.c, line 9

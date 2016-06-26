@@ -1,0 +1,10 @@
+context_switch
+
+* Defined as a function in:
+kernel/sched/core.c, line 2331
+
+* Referenced (in 2 files total) in:
+kernel/trace/trace_entries.h, line 127
+kernel/sched/core.c:
+line 2331
+line 2829

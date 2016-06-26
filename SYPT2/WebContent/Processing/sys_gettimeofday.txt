@@ -1,0 +1,10 @@
+sys_gettimeofday
+
+* Defined as a function prototype in:
+include/linux/syscalls.h, line 212
+
+* Referenced (in 4 files total) in:
+arch/x86/kernel/vsyscall_64.c, line 238
+arch/xtensa/include/uapi/asm/unistd.h, line 423
+include/linux/syscalls.h, line 212
+include/uapi/asm-generic/unistd.h, line 480

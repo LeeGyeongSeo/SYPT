@@ -1,0 +1,22 @@
+activate_task
+
+* Defined as a function prototype in:
+kernel/sched/sched.h, line 1268
+
+* Defined as a function in:
+kernel/sched/core.c, line 852
+
+* Referenced (in 5 files total) in:
+kernel/sched/fair.c, line 5489
+kernel/sched/core.c:
+line 852
+line 1097
+line 1478
+line 2129
+kernel/sched/rt.c:
+line 1740
+line 1828
+kernel/sched/sched.h, line 1268
+kernel/sched/deadline.c:
+line 1396
+line 1482

@@ -1,0 +1,18 @@
+mm_init
+
+* Defined as a function in:
+kernel/fork.c, line 551
+drivers/block/umem.c, line 1068
+init/main.c, line 486
+
+* Referenced (in 3 files total) in:
+kernel/fork.c:
+line 551
+line 627
+line 859
+drivers/block/umem.c:
+line 1068
+line 1131
+init/main.c:
+line 486
+line 562

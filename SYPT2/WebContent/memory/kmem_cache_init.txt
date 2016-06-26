@@ -1,0 +1,16 @@
+kmem_cache_init
+
+* Defined as a function prototype in:
+include/linux/slab.h, line 112
+
+* Defined as a function in:
+mm/slob.c, line 633
+mm/slub.c, line 3566
+mm/slab.c, line 1382
+
+* Referenced (in 5 files total) in:
+mm/slob.c, line 633
+mm/slub.c, line 3566
+mm/slab.c, line 1382
+init/main.c, line 494
+include/linux/slab.h, line 112

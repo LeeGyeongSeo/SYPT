@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<img src="image.png" usemap="#process">
+<map id="process" name="process">
+<area shape="rect" alt="" title="" coords="145,134,358,175" href="Processing/processes.txt" target="content" /> <!-- processes -->
+<area shape="rect" alt="" title="" coords="56,200,180,226" href="Processing/signal.txt" target="content" /> <!-- kernel/signal.c -->
+<area shape="rect" alt="" title="" coords="270,198,331,223" href="Processing/kernel.txt" target="content" /> <!-- kernel/ -->
+<area shape="rect" alt="" title="" coords="375,200,456,224" href="Processing/fs_exec_c.txt" target="content" /><!-- fs/exec.c -->
+<area shape="rect" alt="" title="" coords="57,237,148,262" href="Processing/sys_signal.txt" target="content" /><!-- sys_signal -->
+<area shape="rect" alt="" title="" coords="265,238,352,262" href="Processing/sys_futex.txt" target="content" /><!-- sys_futex -->
+<area shape="rect" alt="" title="" coords="371,238,455,258" href="Processing/sys_fork.txt" target="content" /><!-- sys_fork -->
+<area shape="rect" alt="" title="" coords="379,274,463,297" href="Processing/sys_vfork.txt" target="content" /><!-- sys_vfork -->
+<area shape="rect" alt="" title="" coords="379,309,464,328" href="Processing/sys_clone.txt" target="content" /><!-- sys_clone -->
+<area shape="rect" alt="" title="" coords="59,278,122,301" href="Processing/sys_kill.txt" target="content" /><!-- sys_kill -->
+<area shape="rect" alt="" title="" coords="58,318,167,339" href="Processing/do_sigaction.txt" target="content" /><!-- do_sigaction -->
+<area shape="rect" alt="" title="" coords="60,365,162,384" href="Processing/sys_execve.txt" target="content" /><!-- sys_execve -->
+<area shape="rect" alt="" title="" coords="265,386,391,408" href="Processing/sys_nanosleep.txt" target="content" /><!-- sys_nanosleep -->
+<area shape="rect" alt="" title="" coords="60,422,163,441" href="Processing/linux_binfmt.txt" target="content" /><!-- linux_binfmt -->
+<area shape="rect" alt="" title="" coords="61,456,210,476" href="Processing/sys_gettimeofday.txt" target="content" /><!-- sys_gettimeofday -->
+<area shape="rect" alt="" title="" coords="61,484,134,500" href="Processing/sys_time.txt" target="content" /><!-- sys_time -->
+<area shape="rect" alt="" title="" coords="61,509,144,528" href="Processing/sys_times.txt" target="content" /><!-- sys_times -->
+<area shape="rect" alt="" title="" coords="186,528,340,570" href="Processing/threads.txt" target="content" /><!-- threads -->
+<area shape="rect" alt="" title="" coords="108,584,239,605" href="Processing/schedule_work.txt" target="content" /><!-- schedule_work -->
+<area shape="rect" alt="" title="" coords="298,586,460,605" href="Processing/create_workqueue.txt" target="content" /><!-- create_workqueue -->
+<area shape="rect" alt="" title="" coords="42,637,142,660" href="Processing/INIT_WORK.txt" target="content" /><!-- INIT_WORK -->
+<area shape="rect" alt="" title="" coords="203,635,307,654" href="Processing/queue_work.txt" target="content" /><!-- queue_work  -->
+<area shape="rect" alt="" title="" coords="83,690,188,712" href="Processing/work_struct.txt" target="content" /><!-- work_struct -->
+<area shape="rect" alt="" title="" coords="255,686,416,708" href="Processing/workqueue_struct.txt" target="content" /><!-- wrokqueue_struct -->
+<area shape="rect" alt="" title="" coords="186,722,318,747" href="Processing/kthread_create.txt" target="content" /><!-- kthread_create -->
+<area shape="rect" alt="" title="" coords="70,754,138,775" href="Processing/current.txt" target="content" /><!-- current -->
+<area shape="rect" alt="" title="" coords="61,807,159,830" href="Processing/thread_info.txt" target="content" /><!-- thread_info -->
+<area shape="rect" alt="" title="" coords="190,788,312,808" href="Processing/kernel_thread.txt" target="content" /><!-- kernel_thread -->
+<area shape="rect" alt="" title="" coords="364,812,434,831" href="Processing/do_fork.txt" target="content" /><!-- do_fork -->
+<area shape="rect" alt="" title="" coords="104,851,416,894" href="Processing/synchronization.txt" target="content" /><!-- synchronization -->
+<area shape="rect" alt="" title="" coords="77,910,178,936" href="Processing/lock_kernel.txt" target="content" /><!-- lock_kernel -->
+<area shape="rect" alt="" title="" coords="268,909,480,928" href="Processing/mutex_lock_interruptible.txt" target="content" /><!-- mutex_lock_interruptible -->
+<area shape="rect" alt="" title="" coords="310,945,428,967" href="Processing/mutex_unlock.txt" target="content" /><!-- mutex_unlock -->
+<area shape="rect" alt="" title="" coords="347,977,401,997" href="Processing/mutex.txt" target="content" /><!-- mutex -->
+<area shape="rect" alt="" title="" coords="430,975,485,995" href="Processing/owner.txt" target="content" /><!-- owner -->
+<area shape="rect" alt="" title="" coords="148,1003,322,1025" href="Processing/waif_for_completion.txt" target="content" /><!-- wait_for_completion -->
+<area shape="rect" alt="" title="" coords="211,1039,290,1061" href="Processing/complete.txt" target="content" /><!-- complete 아래부터한칸씩밀림 -->
+<area shape="rect" alt="" title="" coords="327,1043,487,1061" href="Processing/down_interruptible.txt" target="content" /><!-- complete -->
+<area shape="rect" alt="" title="" coords="377,1065,403,1081" href="Processing/up.txt" target="content" /><!-- down_interruptible -->
+<area shape="rect" alt="" title="" coords="88,1056,174,1074" href="Processing/add_timer.txt" target="content" /><!-- up -->
+<area shape="rect" alt="" title="" coords="342,1083,440,1101" href="Processing/semaphore.txt" target="content" /><!-- add_timer -->
+<area shape="rect" alt="" title="" coords="91,1087,172,1104" href="Processing/timer_list.txt" target="content" /><!-- semaphore -->
+<area shape="rect" alt="" title="" coords="59,1106,207,1129" href="Processing/run_timer_softirq.txt" target="content" /><!-- timer_list -->
+<area shape="rect" alt="" title="" coords="361,1120,455,1140" href="Processing/wait_event.txt" target="content" /><!-- run_timer_softirq -->
+<area shape="rect" alt="" title="" coords="385,1148,459,1170" href="Processing/wake_up.txt" target="content" /><!-- wait_event -->
+<area shape="rect" alt="" title="" coords="80,1168,154,1190" href="Processing/m_sleep.txt" target="content" /><!-- wake_up -->
+<area shape="rect" alt="" title="" coords="204,1167,358,1185" href="Processing/spin_lock_irqsave.txt" target="content" /><!-- m_sleep -->
+<area shape="rect" alt="" title="" coords="180,1189,378,1209" href="Processing/spin_unlock_irqrestore.txt" target="content" /><!-- spin_lock_irqsave -->
+<area shape="rect" alt="" title="" coords="155,1221,351,1262" href="Processing/scheduler.txt" target="content" /><!-- spin_unlock_irqrestore -->
+<area shape="rect" alt="" title="" coords="173,1275,297,1299" href="Processing/kernel_sched.txt" target="content" /><!-- scheduler -->
+<area shape="rect" alt="" title="" coords="334,1280,433,1298" href="Processing/task_struct.txt" target="content" /><!-- kernel/sched.c -->
+<area shape="rect" alt="" title="" coords="54,1316,204,1335" href="Processing/schedule_timeout.txt" target="content" /><!-- task_struct -->
+<area shape="rect" alt="" title="" coords="381,1335,458,1353" href="Processing/schedule.txt" target="content" /><!-- schedule_timeout -->
+<area shape="rect" alt="" title="" coords="82,1358,181,1377" href="Processing/setup_timer.txt" target="content" /><!-- schedule -->
+<area shape="rect" alt="" title="" coords="81,1402,223,1420" href="Processing/process_timeout.txt" target="content" /><!-- setup_timer -->
+<area shape="rect" alt="" title="" coords="93,1448,205,1465" href="Processing/activate_task.txt" target="content" /><!-- process_timout -->
+<area shape="rect" alt="" title="" coords="267,1424,292,1443" href="Processing/rq.txt" target="content" /><!-- activate_task -->
+<area shape="rect" alt="" title="" coords="366,1392,495,1409" href="Processing/context_switch.txt" target="content" /><!-- rq -->
+<area shape="rect" alt="" title="" coords="195,1561,295,1582" href="Processing/request_irq.txt" target="content" /><!-- interrupts core -->
+<area shape="rect" alt="" title="" coords="61,1601,156,1624" href="Processing/jiffies_64.txt" target="content" /><!-- request_irq -->
+<area shape="rect" alt="" title="" coords="339,1594,455,1614" href="Processing/tasklet_struct.txt" target="content" /><!-- jiffies_64++ -->
+<area shape="rect" alt="" title="" coords="337,1638,457,1661" href="Processing/tasklet_action.txt" target="content" /><!-- tasklet_struct  -->
+<area shape="rect" alt="" title="" coords="72,1645,149,1667" href="Processing/do_timer.txt" target="content" /><!-- tasklet_action -->
+<area shape="rect" alt="" title="" coords="58,1692,166,1716" href="Processing/tick_periodic.txt" target="content" /><!-- tick_periodic -->
+<area shape="rect" alt="" title="" coords="204,1679,285,1701" href="Processing/setup_irq.txt" target="content" /><!-- setup_irq -->
+<area shape="rect" alt="" title="" coords="54,1751,183,1774" href="Processing/timer_interrupt.txt" target="content" /><!-- timer_interrupt -->
+<area shape="rect" alt="" title="" coords="262,1732,353,1753" href="Processing/do_softirq.txt" target="content" /><!-- do_softirq -->
+<area shape="rect" alt="" title="" coords="153,1802,219,1826" href="Processing/do_IRQ.txt" target="content" /><!-- do_IRQ -->
+<area shape="rect" alt="" title="" coords="361,1766,439,1789" href="Processing/irq_desc.txt" target="content" /><!-- irq_desc -->
+<area shape="rect" alt="" title="" coords="366,1799,454,1822" href="Processing/softirq_init.txt" target="content" /><!-- softirq_init -->
+<area shape="rect" alt="" title="" coords="36,1904,115,1922" href="Processing/arhc_x86.txt" target="content" /><!-- arhc/x86 -->
+<area shape="rect" alt="" title="" coords="106,1943,205,1962" href="Processing/setup_arch.txt" target="content" /><!-- setup_arch -->
+<area shape="rect" alt="" title="" coords="250,1960,325,1975" href="Processing/trap_init.txt" target="content" /><!-- trap_init -->
+<area shape="rect" alt="" title="" coords="252,1985,372,2004" href="Processing/x86_init.txt" target="content" /><!-- x86_init -->
+<area shape="rect" alt="" title="" coords="106,1988,175,2006" href="Processing/early_trap_init.txt" target="content" /><!-- early_trap_init -->
+<area shape="rect" alt="" title="" coords="57,2056,164,2076" href="Processing/start_thread.txt" target="content" /><!-- start_thread -->
+<area shape="rect" alt="" title="" coords="57,2130,161,2153" href="Processing/system_call.txt" target="content" /><!-- system_call -->
+<area shape="rect" alt="" title="" coords="66,2174,157,2199" href="Processing/show_regs.txt" target="content" /><!-- show_regs -->
+<area shape="rect" alt="" title="" coords="122,2229,189,2250" href="Processing/pr_regs.txt" target="content" /><!-- pr_regs -->
+<area shape="rect" alt="" title="" coords="232,2230,312,2251" href="Processing/atomic_t.txt" target="content" /><!-- atomic_t -->
+<area shape="rect" alt="" title="" coords="342,2233,367,2248" href="Processing/cli.txt" target="content" /><!-- cli -->
+<area shape="rect" alt="" title="" coords="406,2224,433,2243" href="Processing/sti.txt" target="content" /><!-- sti -->
+<area shape="rect" alt="" title="" coords="333,2156,410,2179" href="Processing/interrupt.txt" target="content" /><!-- interrupt -->
+<area shape="rect" alt="" title="" coords="261,2051,392,2070" href="Processing/native_init_IRQ.txt" target="content" /><!-- native_init_IRQ -->
+<area shape="rect" alt="" title="" coords="408,2072,492,2097" href="Processing/swich_to.txt" target="content" /><!-- switch_to -->
+<area shape="rect" alt="" title="" coords="264,2103,377,2126" href="Processing/set_intr_gate.txt" target="content" /><!-- set_intr_gate -->
+
+<!-- 여기부터는 memory -->
+
+<area shape="rect" alt="" title="" coords="568,195,612,224" href="memory/mm.txt" target="content" />
+<area shape="rect" alt="" title="" coords="708,200,779,224" href="memory/sys_brk.txt" target="content" />
+<area shape="rect" alt="" title="" coords="696,233,789,255" href="memory/sys_mmap.txt" target="content" />
+<area shape="rect" alt="" title="" coords="830,232,945,256" href="memory/shm_vm_ops.txt" target="content" />
+<area shape="rect" alt="" title="" coords="584,290,683,314" href="memory/sys_sysinfo.txt" target="content" />
+<area shape="rect" alt="" title="" coords="830,275,930,297" href="memory/sys_shmctl.txt" target="content" />
+<area shape="rect" alt="" title="" coords="833,307,926,332" href="memory/sys_shmat.txt" target="content" />
+<area shape="rect" alt="" title="" coords="549,360,650,383" href="memory/si_meminfo.txt" target="content" />
+<area shape="rect" alt="" title="" coords="829,367,951,388" href="memory/sys_mprotect.txt" target="content" />
+<area shape="rect" alt="" title="" coords="831,401,940,425" href="memory/sys_mincore.txt" target="content" />
+<area shape="rect" alt="" title="" coords="714,421,807,439" href="memory/mem_fops.txt" target="content" />
+<area shape="rect" alt="" title="" coords="713,447,818,469" href="memory/mmap_mem.txt" target="content" />
+<area shape="rect" alt="" title="" coords="866,465,963,487" href="memory/sys_msync.txt" target="content" />
+<area shape="rect" alt="" title="" coords="581,583,685,610" href="memory/vmalloc_init.txt" target="content" />
+<area shape="rect" alt="" title="" coords="555,624,712,651" href="memory/find_vma_prepare.txt" target="content" />
+<area shape="rect" alt="" title="" coords="600,715,657,737" href="memory/vmlist.txt" target="content" />
+<area shape="rect" alt="" title="" coords="741,717,813,740" href="memory/vmalloc.txt" target="content" />
+<area shape="rect" alt="" title="" coords="587,762,677,789" href="memory/vm_struct.txt" target="content" />
+<area shape="rect" alt="" title="" coords="842,767,893,791" href="memory/vfree.txt" target="content" />
+<area shape="rect" alt="" title="" coords="571,812,685,836" href="memory/virt_to_page.txt" target="content" />
+<area shape="rect" alt="" title="" coords="895,818,980,839" href="memory/do_mmap.txt" target="content" />
+<area shape="rect" alt="" title="" coords="582,841,945,879" href="memory/memory_mapping.txt" target="content" />
+<area shape="rect" alt="" title="" coords="539,883,649,905" href="memory/mmap_c.txt" target="content" />
+<area shape="rect" alt="" title="" coords="686,927,826,951" href="memory/do_mmap_pgoff.txt" target="content" />
+<area shape="rect" alt="" title="" coords="680,977,841,1006" href="memory/kmem_cache_alloc.txt" target="content" />
+<area shape="rect" alt="" title="" coords="722,1034,797,1060" href="memory/vma_link.txt" target="content" />
+<area shape="rect" alt="" title="" coords="713,1089,806,1117" href="memory/mm_struct.txt" target="content" />
+<area shape="rect" alt="" title="" coords="691,1144,830,1167" href="memory/vm_area_struct.txt" target="content" />
+<area shape="rect" alt="" title="" coords="658,1310,733,1334" href="memory/mm_init.txt" target="content" />
+<area shape="rect" alt="" title="" coords="782,1337,849,1359" href="memory/kmalloc.txt" target="content" />
+<area shape="rect" alt="" title="" coords="585,1355,643,1376" href="memory/pgd_t.txt" target="content" />
+<area shape="rect" alt="" title="" coords="585,1386,644,1408" href="memory/pmd_t.txt" target="content" />
+<area shape="rect" alt="" title="" coords="585,1420,632,1442" href="memory/pte_t.txt" target="content" />
+<area shape="rect" alt="" title="" coords="829,1367,879,1392" href="memory/kfree.txt" target="content" />
+<area shape="rect" alt="" title="" coords="857,1567,974,1589" href="memory/__free_pages.txt" target="content" />
+<area shape="rect" alt="" title="" coords="569,1610,658,1630" href="memory/slob_c.txt" target="content" />
+<area shape="rect" alt="" title="" coords="702,1628,819,1646" href="memory/kmem_cache.txt" target="content" />
+<area shape="rect" alt="" title="" coords="850,1617,990,1641" href="memory/__free_one_page.txt" target="content" />
+<area shape="rect" alt="" title="" coords="568,1642,658,1664" href="memory/slub_c.txt" target="content" />
+<area shape="rect" alt="" title="" coords="569,1671,660,1692" href="memory/slab_c.txt" target="content" />
+<area shape="rect" alt="" title="" coords="682,1666,833,1688" href="memory/kmem_cache_init.txt" target="content" />
+<area shape="rect" alt="" title="" coords="664,1727,826,1745" href="memory/__get_free_pages.txt" target="content" />
+<area shape="rect" alt="" title="" coords="573,1751,618,1769" href="memory/page.txt" target="content" />
+<area shape="rect" alt="" title="" coords="632,1774,703,1795" href="memory/vm_stat.txt" target="content" />
+<area shape="rect" alt="" title="" coords="797,1769,922,1788" href="memory/__alloc_pages.txt" target="content" />
+<area shape="rect" alt="" title="" coords="631,1804,763,1824" href="memory/totalram_pages.txt" target="content" />
+<area shape="rect" alt="" title="" coords="813,1823,973,1847" href="memory/try_to_free_pages.txt" target="content" />
+<area shape="rect" alt="" title="" coords="609,2037,680,2055" href="memory/zonelist.txt" target="content" />
+<area shape="rect" alt="" title="" coords="744,2035,940,2053" href="memory/get_page_from_freelist.txt" target="content" />
+<area shape="rect" alt="" title="" coords="612,2064,652,2083" href="memory/zone.txt" target="content" />
+<area shape="rect" alt="" title="" coords="642,2107,726,2129" href="memory/free_area.txt" target="content" />
+<area shape="rect" alt="" title="" coords="795,2108,866,2127" href="memory/free_list.txt" target="content" />
+<area shape="rect" alt="" title="" coords="955,2142,986,2163" href="memory/die.txt" target="content" />
+<area shape="rect" alt="" title="" coords="750,2173,894,2196" href="memory/out_of_memory.txt" target="content" />
+<area shape="rect" alt="" title="" coords="585,2232,723,2255" href="memory/num_physpages.txt" target="content" />
+<area shape="rect" alt="" title="" coords="837,2228,962,2252" href="memory/do_page_fault.txt" target="content" />
+<area shape="rect" alt="" title="" coords="597,1969,717,1992" href="memory/arch_x86_mm.txt" target="content" />
+<area shape="rect" alt="" title="" coords="824,1973,911,1994" href="memory/mem_init.txt" target="content" />
+</map>
+</map>
+</body>
+</html>

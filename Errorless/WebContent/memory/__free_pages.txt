@@ -1,0 +1,156 @@
+__free_pages
+
+* Defined as a function in:
+mm/page_alloc.c, line 2883
+
+* Defined as a function prototype in:
+include/linux/gfp.h, line 371
+
+* Referenced (in 75 files total) in:
+arch/x86/kvm/svm.c:
+line 934
+line 946
+line 1270
+line 1272
+line 1288
+line 1290
+arch/x86/kernel/amd_gart_64.c, line 501
+arch/x86/kernel/pci-dma.c, line 119
+arch/x86/include/asm/pgalloc.h, line 88
+arch/s390/mm/pgtable.c:
+line 255
+line 310
+arch/score/include/asm/pgalloc.h, line 75
+arch/mips/mm/dma-default.c, line 189
+arch/mips/include/asm/pgalloc.h, line 101
+arch/sparc/kernel/ioport.c, line 347
+arch/arm/mm/dma-mapping.c:
+line 1162
+line 1182
+arch/tile/mm/pgtable.c, line 245
+arch/tile/mm/homecache.c, line 423
+arch/tile/mm/init.c, line 690
+arch/sh/mm/consistent.c, line 76
+arch/arm64/mm/dma-mapping.c, line 419
+arch/powerpc/mm/dma-noncoherent.c, line 248
+arch/powerpc/kernel/fadump.c, line 575
+arch/powerpc/platforms/cell/spufs/lscsa_alloc.c, line 168
+arch/powerpc/platforms/cell/ras.c:
+line 159
+line 233
+arch/powerpc/platforms/powernv/pci-ioda.c:
+line 1118
+line 1252
+arch/m68k/kernel/dma.c, line 41
+arch/metag/kernel/dma.c, line 262
+net/ceph/pagevec.c, line 68
+mm/page_isolation.c, line 126
+mm/page_alloc.c:
+line 800
+line 822
+line 827
+line 2883
+line 2893
+line 2899
+line 2943
+mm/slob.c, line 500
+mm/hugetlb.c:
+line 843
+line 993
+line 1154
+mm/mempool.c, line 377
+mm/nommu.c, line 1204
+mm/kmemcheck.c, line 57
+mm/slub.c, line 1441
+mm/slab.c, line 1641
+mm/percpu-km.c, line 83
+mm/huge_memory.c:
+line 203
+line 235
+kernel/kexec.c, line 665
+block/blk-mq.c, line 1307
+drivers/infiniband/hw/mthca/mthca_memfree.c, line 73
+drivers/char/agp/intel-gtt.c:
+line 153
+line 168
+drivers/char/agp/i460-agp.c:
+line 380
+line 396
+drivers/lguest/core.c:
+line 138
+line 154
+drivers/staging/media/omap24xx/omap24xxcam.c, line 248
+drivers/staging/android/ion/ion_page_pool.c, line 41
+drivers/staging/android/ion/ion_system_heap.c, line 91
+drivers/iommu/intel-iommu.c:
+line 3280
+line 3296
+drivers/iommu/intel_irq_remapping.c, line 503
+drivers/net/ethernet/sun/cassini.c:
+line 472
+line 3419
+drivers/net/ethernet/chelsio/cxgb4/sge.c, line 598
+drivers/net/ethernet/chelsio/cxgb3/sge.c, line 394
+drivers/net/ethernet/chelsio/cxgb4vf/sge.c, line 636
+drivers/net/ethernet/qlogic/qlge/qlge_main.c, line 1108
+drivers/net/ethernet/intel/ixgbe/ixgbe_main.c:
+line 1461
+line 4332
+drivers/net/ethernet/tile/tilepro.c:
+line 2327
+line 2336
+line 2361
+drivers/net/ethernet/tile/tilegx.c:
+line 1453
+line 1456
+line 1459
+drivers/net/ethernet/mellanox/mlx4/icm.c, line 63
+drivers/net/ethernet/myricom/myri10ge/myri10ge.c, line 1331
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.c, line 560
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_cmn.h, line 809
+drivers/net/ethernet/sfc/rx.c:
+line 177
+line 514
+drivers/net/virtio_net.c, line 1468
+drivers/net/wireless/iwlwifi/iwl-trans.h, line 316
+drivers/net/wireless/iwlwifi/pcie/trans.c:
+line 91
+line 127
+drivers/net/wireless/iwlwifi/pcie/rx.c:
+line 313
+line 333
+line 364
+line 669
+line 687
+drivers/net/wireless/iwlegacy/common.h, line 1500
+drivers/net/wireless/iwlegacy/4965-mac.c:
+line 365
+line 376
+drivers/net/wireless/iwlegacy/3945-mac.c:
+line 1050
+line 1061
+drivers/mmc/card/mmc_test.c:
+line 305
+line 2887
+drivers/gpu/drm/i915/i915_gem_gtt.c:
+line 342
+line 355
+line 483
+drivers/gpu/drm/armada/armada_gem.c, line 61
+drivers/scsi/st.c, line 3819
+drivers/scsi/osst.c, line 5413
+drivers/scsi/sg.c:
+line 1914
+line 1936
+drivers/scsi/pmcraid.c:
+line 3328
+line 3382
+drivers/scsi/ipr.c:
+line 3767
+line 3793
+fs/logfs/super.c:
+line 636
+line 645
+include/linux/gfp.h:
+line 371
+line 379

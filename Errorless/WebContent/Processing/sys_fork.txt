@@ -1,0 +1,15 @@
+sys_fork
+
+* Defined as a function prototype in:
+include/linux/syscalls.h, line 825
+
+* Defined as a preprocessor macro in:
+arch/openrisc/include/asm/syscalls.h, line 32
+
+* Referenced (in 6 files total) in:
+arch/x86/um/sys_call_table_64.c, line 31
+arch/mips/kernel/syscall.c, line 85
+arch/arm64/include/asm/unistd32.h, line 29
+arch/openrisc/include/asm/syscalls.h, line 32
+include/linux/syscalls.h, line 825
+include/uapi/asm-generic/unistd.h, line 867

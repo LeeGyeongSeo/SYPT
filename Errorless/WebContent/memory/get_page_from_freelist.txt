@@ -1,0 +1,14 @@
+get_page_from_freelist
+
+* Defined as a function in:
+mm/page_alloc.c, line 1936
+
+* Referenced (in 1 files total) in:
+mm/page_alloc.c:
+line 1936
+line 2258
+line 2333
+line 2425
+line 2457
+line 2599
+line 2826

@@ -1,0 +1,51 @@
+kthread_create
+
+* Defined as a preprocessor macro in:
+include/linux/kthread.h, line 13
+
+* Referenced (in 39 files total) in:
+arch/x86/mm/pageattr-test.c, line 250
+arch/x86/kernel/apm_32.c, line 2362
+security/tomoyo/gc.c, line 649
+kernel/trace/ring_buffer.c, line 4856
+kernel/trace/ring_buffer_benchmark.c, line 426
+kernel/workqueue.c, line 4063
+kernel/rcu/tree_plugin.h, line 1321
+kernel/irq/manage.c, line 1002
+drivers/vhost/vhost.c, line 380
+drivers/char/apm-emulation.c, line 658
+drivers/memstick/host/rtsx_usb_ms.c, line 745
+drivers/platform/x86/intel_ips.c, line 1637
+drivers/staging/unisys/uislib/uisthread.c, line 47
+drivers/staging/speakup/main.c, line 2355
+drivers/net/xen-netback/interface.c:
+line 571
+line 580
+drivers/usb/atm/usbatm.c, line 991
+drivers/usb/atm/ueagle-atm.c, line 2227
+drivers/usb/gadget/function/f_mass_storage.c, line 3047
+drivers/usb/usbip/usbip_common.h, line 283
+drivers/dma/dmatest.c, line 768
+drivers/media/usb/gspca/m5602/m5602_s5k83a.c, line 222
+drivers/md/bcache/writeback.c, line 502
+drivers/md/bcache/btree.c, line 1798
+drivers/crypto/ccp/ccp-dev.c, line 421
+drivers/block/drbd/drbd_main.c, line 417
+drivers/block/nbd.c, line 709
+drivers/block/loop.c, line 909
+drivers/tty/bfin_jtag_comm.c, line 240
+drivers/tty/metag_da.c, line 609
+drivers/mtd/ubi/build.c, line 1010
+drivers/scsi/qla2xxx/qla_os.c, line 2820
+drivers/scsi/mvumi.c, line 2474
+drivers/scsi/bfa/bfad.c, line 181
+drivers/scsi/bnx2fc/bnx2fc_fcoe.c, line 2577
+sound/pci/emu10k1/emu10k1_main.c, line 1128
+fs/nfs/callback.c, line 238
+fs/ubifs/super.c:
+line 1252
+line 1632
+fs/lockd/svc.c, line 308
+include/linux/kthread.h:
+line 13
+line 34

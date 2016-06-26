@@ -1,0 +1,10 @@
+tick_periodic
+
+* Defined as a function in:
+kernel/time/tick-common.c, line 78
+
+* Referenced (in 1 files total) in:
+kernel/time/tick-common.c:
+line 78
+line 103
+line 126

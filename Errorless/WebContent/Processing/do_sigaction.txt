@@ -1,0 +1,25 @@
+do_sigaction
+
+* Defined as a function in:
+kernel/signal.c, line 3090
+
+* Defined as a function prototype in:
+include/linux/sched.h, line 2342
+
+* Referenced (in 8 files total) in:
+arch/mips/kernel/signal.c, line 336
+arch/mips/kernel/signal32.c, line 339
+arch/sparc/kernel/sys_sparc_32.c, line 192
+arch/sparc/kernel/sys_sparc_64.c, line 634
+arch/sparc/kernel/sys_sparc32.c, line 183
+arch/alpha/kernel/signal.c:
+line 75
+line 105
+kernel/signal.c:
+line 3090
+line 3358
+line 3399
+line 3438
+line 3478
+line 3530
+include/linux/sched.h, line 2343

@@ -1,0 +1,42 @@
+vma_link
+
+* Defined as a function in:
+mm/mmap.c, line 669
+
+* Referenced (in 9 files total) in:
+mm/mmap.c:
+line 669
+line 1645
+line 2714
+line 2822
+line 2892
+drivers/gpu/drm/i915/i915_gem.c:
+line 2011
+line 2938
+line 3714
+line 3739
+line 3745
+line 4481
+line 4535
+line 4556
+line 5173
+line 5219
+line 5234
+line 5245
+line 5262
+line 5368
+drivers/gpu/drm/i915/i915_gem_gtt.c:
+line 2139
+line 2171
+line 2173
+drivers/gpu/drm/i915/i915_gem_userptr.c, line 82
+drivers/gpu/drm/i915/i915_debugfs.c:
+line 144
+line 152
+line 324
+drivers/gpu/drm/i915/i915_drv.h, line 2540
+drivers/gpu/drm/i915/i915_gpu_error.c:
+line 717
+line 1094
+drivers/gpu/drm/i915/i915_gem_execbuffer.c, line 363
+drivers/gpu/drm/i915/i915_gem_gtt.h, line 129

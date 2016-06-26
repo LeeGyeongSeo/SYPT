@@ -1,0 +1,9 @@
+sys_nanosleep
+
+* Defined as a function prototype in:
+include/linux/syscalls.h, line 221
+
+* Referenced (in 3 files total) in:
+arch/xtensa/include/uapi/asm/unistd.h, line 429
+include/linux/syscalls.h, line 221
+include/uapi/asm-generic/unistd.h, line 318

@@ -1,0 +1,23 @@
+early_trap_init
+
+* Defined as a function in:
+arch/x86/kernel/traps.c, line 773
+arch/arm/kernel/traps.c, line 853
+arch/unicore32/kernel/traps.c, line 305
+
+* Defined as a function prototype in:
+arch/x86/include/asm/processor.h, line 742
+arch/arm/include/asm/traps.h, line 49
+arch/unicore32/include/asm/traps.h, line 15
+
+* Referenced (in 10 files total) in:
+arch/x86/kernel/traps.c, line 773
+arch/x86/kernel/setup.c, line 902
+arch/x86/include/asm/processor.h, line 742
+arch/arm/mm/nommu.c, line 321
+arch/arm/mm/mmu.c, line 1238
+arch/arm/kernel/traps.c, line 853
+arch/arm/include/asm/traps.h, line 49
+arch/unicore32/kernel/traps.c, line 305
+arch/unicore32/kernel/setup.c, line 277
+arch/unicore32/include/asm/traps.h, line 15

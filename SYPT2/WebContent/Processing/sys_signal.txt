@@ -1,0 +1,7 @@
+sys_signal
+
+* Defined as a function prototype in:
+include/linux/syscalls.h, line 380
+
+* Referenced (in 1 files total) in:
+include/linux/syscalls.h, line 380

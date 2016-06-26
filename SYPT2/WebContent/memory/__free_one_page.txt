@@ -1,0 +1,10 @@
+__free_one_page
+
+* Defined as a function in:
+mm/page_alloc.c, line 540
+
+* Referenced (in 1 files total) in:
+mm/page_alloc.c:
+line 540
+line 713
+line 735

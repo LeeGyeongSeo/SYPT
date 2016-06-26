@@ -1,0 +1,115 @@
+down_interruptible
+
+Defined as a function prototype in:
+include/linux/semaphore.h, line 40
+Defined as a function in:
+kernel/locking/semaphore.c, line 75
+Referenced (in 45 files total) in:
+arch/powerpc/kernel/eeh_event.c, line 58
+arch/powerpc/platforms/powernv/opal-async.c, line 65
+arch/ia64/kernel/salinfo.c, line 314
+net/9p/trans_rdma.c:
+line 468
+line 510
+kernel/locking/semaphore.c:
+line 75
+line 89
+drivers/hv/hv_fcopy.c, line 273
+drivers/infiniband/core/user_mad.c, line 1032
+drivers/infiniband/ulp/isert/ib_isert.c, line 3157
+drivers/hid/hid-core.c:
+line 2068
+line 2070
+line 2110
+line 2112
+drivers/char/snsc.c:
+line 175
+line 267
+drivers/target/iscsi/iscsi_target.c, line 234
+drivers/target/target_core_sbc.c, line 531
+drivers/staging/rtl8712/osdep_service.h, line 89
+drivers/staging/rtl8188eu/os_dep/osdep_service.c, line 68
+drivers/staging/dgnc/dgnc_tty.c, line 1945
+drivers/net/wan/cosa.c, line 870
+drivers/net/ethernet/broadcom/bnx2x/bnx2x_main.c:
+line 10296
+line 10361
+line 10395
+line 10635
+drivers/net/ethernet/micrel/ksz884x.c, line 5858
+drivers/net/wireless/mwifiex/pcie.c, line 2657
+drivers/net/wireless/mwifiex/scan.c, line 2231
+drivers/net/wireless/mwifiex/sdio.c, line 2220
+drivers/net/wireless/mwifiex/main.c:
+line 840
+line 945
+drivers/net/wireless/mwifiex/usb.c, line 1035
+drivers/net/wireless/ath/ath6kl/init.c:
+line 1869
+line 1870
+drivers/net/wireless/ath/ath6kl/cfg80211.c:
+line 483
+line 834
+line 1776
+drivers/net/wireless/ath/ath6kl/debug.c:
+line 572
+line 1173
+drivers/net/wireless/brcm80211/brcmfmac/dhd_sdio.c:
+line 2374
+line 2723
+line 2907
+line 2929
+drivers/net/wireless/airo.c:
+line 1753
+line 2709
+line 3074
+line 3582
+line 3611
+line 3806
+line 4122
+line 4190
+line 4265
+line 5458
+line 5595
+line 5949
+line 7229
+line 7448
+line 7505
+drivers/parport/ieee1284.c, line 86
+drivers/usb/usb-skeleton.c, line 381
+drivers/usb/misc/usblcd.c, line 235
+drivers/usb/misc/ftdi-elan.c, line 636
+drivers/media/dvb-core/dvb_frontend.c:
+line 251
+line 625
+line 634
+line 833
+line 1907
+drivers/crypto/ux500/hash/hash_core.c:
+line 389
+line 1906
+line 1907
+drivers/crypto/ux500/cryp/cryp_core.c:
+line 432
+line 1720
+line 1721
+drivers/input/misc/hp_sdc_rtc.c:
+line 111
+line 180
+line 189
+drivers/gpu/drm/udl/udl_main.c, line 153
+drivers/video/fbdev/udlfb.c, line 1837
+drivers/video/fbdev/smscufx.c, line 1846
+drivers/scsi/esas2r/esas2r_ioctl.c:
+line 113
+line 212
+line 1979
+drivers/scsi/esas2r/esas2r_flash.c:
+line 1194
+line 1268
+drivers/scsi/megaraid/megaraid_sas_base.c, line 6167
+drivers/scsi/aacraid/commctrl.c, line 326
+drivers/scsi/aacraid/commsup.c:
+line 531
+line 595
+include/linux/semaphore.h, line 40

@@ -1,0 +1,15 @@
+do_mmap
+
+* Defined as a function in:
+tools/testing/selftests/vm/hugetlbfstest.c, line 32
+
+* Referenced (in 2 files total) in:
+arch/tile/kernel/unaligned.c, line 1582
+tools/testing/selftests/vm/hugetlbfstest.c:
+line 32
+line 75
+line 76
+line 77
+line 78
+line 79
+line 81
