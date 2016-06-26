@@ -1,1 +1,0 @@
-http://www.makelinux.net/reference?n=Anatomy%20of%20Linux%20synchronization%20methods

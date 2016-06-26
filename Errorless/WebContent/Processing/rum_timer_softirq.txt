@@ -1,9 +1,0 @@
-run_timer_softirq
-
-* Defined as a function in:
-kernel/time/timer.c, line 1397
-
-* Referenced (in 1 files total) in:
-kernel/time/timer.c:
-line 1397
-line 1684
