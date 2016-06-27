@@ -2,9 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*, javax.activation.*, javax.mail.*, javax.mail.internet.*"%>
 <jsp:useBean id="mem" scope="session" class="sypt.Member" />
-<jsp:useBean id="DA" scope="session" class="sypt.MemberBean" />
+<jsp:useBean id="DAO" scope="session" class="sypt.MemberDAO" />
 <jsp:setProperty name="mem" property="*" />
-<jsp:setProperty name="DA" property="*" />
+<jsp:setProperty name="DAO" property="*" />
 <%!public class MyAuthentication extends Authenticator { //아이디 패스워드 인증받기
 		PasswordAuthentication pa;
 
@@ -36,9 +36,12 @@ public String randNum(){
 	String smtpHost = "smtp.gmail.com";
 	String toEmail = request.getParameter("toEmail");
 	String fromEmail = "admin@sypt.com";
-	DA.connect();
-	String url = "http://localhost:8080/SYPT2/errorless/controller.jsp?action=joinComplete&uuid="+DA.findUuid(toEmail);
 
+	
+	//String url = "http://localhost:8080/SYPT2/errorless/controller.jsp?action=joinComplete&uuid="+DAO.findUuid(toEmail);
+	String url = "http://sypt-web.ap-northeast-2.elasticbeanstalk.com/controller.jsp?action=joinComplete&uuid="+DAO.findUuid(toEmail);
+	
+	
 	try {
 		Properties props = new Properties();
 		props.put("mail.transport.protocol", "smtp");
@@ -59,7 +62,7 @@ public String randNum(){
 		Message msg = new MimeMessage(sess);
 		msg.setFrom(new InternetAddress(fromEmail));
 		msg.setSubject("SYPT email authentication test");
-		msg.setContent("아래의 링크를 클릭하면 SYPT 가입이 완료됩니다.\n" + url, "text/html;charset=utf-8");
+		msg.setContent("링크로 접속하면 SYPT 가입이 완료됩니다.\n" + url, "text/html;charset=utf-8");
 		msg.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
 		/* transport.connect();
 		transport.sendMessage(msg, msg.getRecipients(Message.RecipientType.TO));
@@ -71,10 +74,9 @@ public String randNum(){
 		e.printStackTrace();
 		out.println("<script>alert('메일 전송에 실패했습니다.\\n다시 시도해주세요.');</script>");
 		return;
+	} finally{
+		out.println("<script>alert('메일이 전송되었습니다.\\n이메일 확인 후 가입이 완료됩니다.');<script>");		
 	}
 
-	out.println("<script>alert('메일이 전송되었습니다.');<script>");
-	//return;
-	DA.disconnect();
 	pageContext.forward("login.jsp");
 %>

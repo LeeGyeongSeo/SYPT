@@ -28,9 +28,7 @@
 <div class="container">
 	<h1>회원가입이 완료되었습니다.</h1>
 	<br>
-	<form name=formform method="post" action=controller.jsp?action=login>
-		<button type="button" class="btn btn-primary">로그인</button>
-	</form>
+<!-- 로그인페이지로 가거나 창 닫기 추가? -->
 </div>
 </body>
 </html>
