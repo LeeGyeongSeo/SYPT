@@ -9,27 +9,11 @@
 </head>
 <body>
 <%
-		String func_name = (String) request.getParameter("func_name");
-		
+		String func_name = (String) request.getParameter("func_name");		
 		String name = func_name;
 		name = name + ".txt";
 
-		String path = "C:/Users/eunju/git/SYPT2/SYPT2/WebContent/";
-
-		FileReader fr = null;
-		char[] buf = new char[512];
-		int len = -1;
-
-		try {
-			fr = new FileReader(path + name);
-			
-			while ((len = fr.read(buf)) != -1) {
-				String msg = new String(buf, 0, len);
-				out.print(msg);
-			}			
-		}catch (Exception e) {
-			out.print("검색한 함수가 존재하지 않습니다.");
-		}
+		response.sendRedirect(name);		
 %>
 
 </body>
