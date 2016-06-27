@@ -11,7 +11,7 @@ public class MemberBean {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	String jdbc_driver = "com.mysql.jdbc.Driver";
-	String jdbc_url = "jdbc:mysql://localhost:3306/sypt";
+	String jdbc_url = "jdbc:mysql://localhost:3306/mysql";
 	ResultSet rs = null;
 
 	public MemberBean() {
@@ -22,7 +22,7 @@ public class MemberBean {
 		try {
 			Class.forName(jdbc_driver);
 			conn = DriverManager.getConnection(jdbc_url, "root", "1234");
-			System.out.println("연결 성공");
+			System.out.println("�뿰寃� �꽦怨�");
 		} catch (Exception e) {
 			System.out.println(e);
 		}
@@ -53,7 +53,7 @@ public class MemberBean {
 		}
 	}
 
-	// 회원가입
+	// �쉶�썝媛��엯
 	public boolean insertMemInfo(Member member) throws SQLException {
 		// disconnect();
 		connect();
@@ -77,7 +77,7 @@ public class MemberBean {
 		return true;
 	}
 
-	// 이메일 중복 확인
+	// �씠硫붿씪 以묐났 �솗�씤
 	public boolean IDcheck(String id_mem) throws SQLException {
 		try {
 			connect();
@@ -104,7 +104,7 @@ public class MemberBean {
 		return false;
 	}
 
-	// 이메일 전송할 때 해당 이메일(id_mem)에 해당하는 uuid 불러와서 링크 보낼거임.
+	// �씠硫붿씪 �쟾�넚�븷 �븣 �빐�떦 �씠硫붿씪(id_mem)�뿉 �빐�떦�븯�뒗 uuid 遺덈윭���꽌 留곹겕 蹂대궪嫄곗엫.
 	public String findUuid(String id_mem) {
 		try {
 			connect();
@@ -130,7 +130,7 @@ public class MemberBean {
 		return resUuid;
 	}
 
-	// 이메일 인증 완료 - joinComplete.jsp
+	// �씠硫붿씪 �씤利� �셿猷� - joinComplete.jsp
 	public boolean checkAuthentication(Member member) throws SQLException {
 		connect();
 		String sql = "update member set auth_state=1 where uuid=?";
@@ -147,7 +147,7 @@ public class MemberBean {
 		return true;
 	}
 
-	// 로그인할 때, auth_state=1인지 확인하고!!!!! id, pw 매치
+	// 濡쒓렇�씤�븷 �븣, auth_state=1�씤吏� �솗�씤�븯怨�!!!!! id, pw 留ㅼ튂
 	public int login(String id, String pw) throws SQLException{
 		connect();
 		int x = -1;
@@ -173,7 +173,7 @@ public class MemberBean {
 		return x;
 	}
 
-	//아이디(이메일) 입력했을 때 사용자 정보 불러오기. 마이페이지 등에서 사용
+	//�븘�씠�뵒(�씠硫붿씪) �엯�젰�뻽�쓣 �븣 �궗�슜�옄 �젙蹂� 遺덈윭�삤湲�. 留덉씠�럹�씠吏� �벑�뿉�꽌 �궗�슜
 	public Member loadMemInfo(String id_mem) {
 		try {
 			connect();

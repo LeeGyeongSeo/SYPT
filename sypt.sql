@@ -65,6 +65,8 @@ CREATE TABLE `member` (
   `gender` varchar(10) DEFAULT NULL,
   `birthday` date DEFAULT NULL,
   `register_date` date DEFAULT NULL,
+  `auth_state` varchar(1) DEFAULT `0`,
+  `uuid` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`no_mem`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
