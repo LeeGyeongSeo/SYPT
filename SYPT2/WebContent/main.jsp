@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-String id_mem = (String)session.getAttribute("UID");
-if(id_mem == null){
-	response.sendRedirect("login.jsp");
+	String id_mem = (String) session.getAttribute("UID");
+	if (id_mem == null) {
+		response.sendRedirect("login.jsp");
 
-}else{
-
+	} else {
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -34,7 +33,8 @@ if(id_mem == null){
 </head>
 <body>
 
-	<h3><%=id_mem%>님 로그인되었습니다. 메인화면</h3>
+	<h3><%=id_mem%>님 로그인되었습니다. 메인화면
+	</h3>
 	<a href="/sypt/errorless/kernel.jsp" class="btn btn-default"
 		role="button">커널분석</a>
 	<a href="/sypt/errorless/searchFunction.jsp" class="btn btn-default"

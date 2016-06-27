@@ -13,15 +13,14 @@
     request.setCharacterEncoding("utf-8");
 %>
 <jsp:useBean id="mem" scope="session" class="sypt.Member" />
-<jsp:useBean id="DA" scope="session" class="sypt.MemberBean" />
+<jsp:useBean id="DAO" scope="session" class="sypt.MemberDAO" />
 <jsp:setProperty name="mem" property="*" />
-<jsp:setProperty name="DA" property="*" />
+<jsp:setProperty name="DAO" property="*" />
 
 <body>
 <%
 	String id = request.getParameter("id");
-	DA.connect();
-	boolean check = DA.IDcheck(id);
+	boolean check = DAO.IDcheck(id);
     if(check || id.equals("")) {
 %>
 <table width="300" border="0" cellspacing="0" cellpadding="5">

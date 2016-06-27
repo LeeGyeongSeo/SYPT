@@ -6,9 +6,12 @@
 	request.setCharacterEncoding("utf-8");
 %>
 <jsp:useBean id="mem" scope="session" class="sypt.Member" />
-<jsp:useBean id="DA" scope="session" class="sypt.MemberBean" />
 <jsp:setProperty name="mem" property="*" />
+<!--<jsp:useBean id="DA" scope="session" class="sypt.MemberBean" />
 <jsp:setProperty name="DA" property="*" />
+-->
+<jsp:useBean id="DAO" scope="session" class="sypt.MemberDAO" />
+<jsp:setProperty name="DAO" property="*" />
 <%
 	int flag = 0;
 	String action = request.getParameter("action");
@@ -25,9 +28,7 @@
 		String ID = request.getParameter("id_mem");
 		String password = request.getParameter("password");
 
-		DA.disconnect();
-		DA.connect();
-		int check = DA.login(ID, password);
+		int check = DAO.login(ID, password);
 		if (check == 1) {
 			session.setAttribute("UID", ID);
 			//response.sendRedirect("controller.jsp?action=main");
@@ -39,8 +40,7 @@
 			out.println("</script>");
 		}
 
-		if (flag == 0)
-			DA.disconnect();
+
 	} else if (action.equals("idcheck")) {
 
 		pageContext.forward("idcheck.jsp");
@@ -57,7 +57,6 @@
 		String gender = request.getParameter("gender");
 		String birthday = request.getParameter("birthday");
 
-		DA.connect();
 		Member newDB = new Member();
 		newDB.setId_mem(id_mem);
 		newDB.setPassword(password);
@@ -69,27 +68,24 @@
 		newDB.setRdate(format1.format(cal.getTime()));
 		newDB.setUuid(UUID.randomUUID().toString().substring(0, 19));
 
-		if (DA.insertMemInfo(newDB)) {
+		if (DAO.insertMemInfo(newDB)) {
 			//url에 메일주소 다 드러나니까ㅠㅜㅜ수정해야됨 forward-setAttribute ㄴㄴ
 			response.sendRedirect("sendMail.jsp?toEmail=" + id_mem);
 		} else {
 			System.out.println("sendMail.jsp 이동 실패...");
 		}
 
-		DA.disconnect();
-
 	} else if (action.equals("joinComplete")) {
 		String uuid = request.getParameter("uuid");
-		DA.connect();
 		Member member = new Member();
 		member.setUuid(uuid);
-		if (DA.checkAuthentication(member)) {
+		if (DAO.checkAuthentication(member)) {
 			System.out.println("auth_state=1 변환 완료");
 			pageContext.forward("joinComplete.jsp");
 		} else {
 			System.out.println("UUID 인증 실패");
 		}
-		DA.disconnect();
+
 
 	} else if (action.equals("main")) {
 		if (session.getAttribute("UID") == null) {
@@ -102,10 +98,8 @@
 	} else if (action.equals("help")) { //도움말
 		pageContext.forward("help.jsp");
 	} else if (action.equals("kernel")) { //커널 분석
-		pageContext.forward("kernel.jsp");
-	} /* else if (action.equals("quiz")) { 
-		pageContext.forward("sendMail.jsp");
-		} */
+		pageContext.forward("kernel.html");
+	}
 	else if (action.equals("searchFunction")) { //함수 검색
 		pageContext.forward("searchFunction.jsp");
 	} else if (action.equals("mypage")) { //마이페이지
