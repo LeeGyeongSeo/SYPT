@@ -7,9 +7,6 @@
 %>
 <jsp:useBean id="mem" scope="session" class="sypt.Member" />
 <jsp:setProperty name="mem" property="*" />
-<!--<jsp:useBean id="DA" scope="session" class="sypt.MemberBean" />
-<jsp:setProperty name="DA" property="*" />
--->
 <jsp:useBean id="DAO" scope="session" class="sypt.MemberDAO" />
 <jsp:setProperty name="DAO" property="*" />
 <%
@@ -19,10 +16,12 @@
 	if (action.equals("login")) { //아예 사용 X임 로그인은 loginCheck에서 하고 바로 main으로 ㄱㄱ
 		if (session.getAttribute("UID") == null) {
 			System.out.println("session.getAttribute() null!!!!!!!!!!");
-			response.sendRedirect("login.jsp");
+			pageContext.forward("login.jsp");
+			//response.sendRedirect("login.jsp");
 		} else {
 			System.out.println("session.getAttribute() not null...");
-			response.sendRedirect("main.jsp");
+			pageContext.forward("main.jsp");
+			//response.sendRedirect("main.jsp");
 		}
 	} else if (action.equals("loginCheck")) {
 		String ID = request.getParameter("id_mem");
@@ -70,7 +69,10 @@
 
 		if (DAO.insertMemInfo(newDB)) {
 			//url에 메일주소 다 드러나니까ㅠㅜㅜ수정해야됨 forward-setAttribute ㄴㄴ
-			response.sendRedirect("sendMail.jsp?toEmail=" + id_mem);
+			//response.sendRedirect("sendMail.jsp?toEmail=" + id_mem);
+			request.setAttribute("toEmail", id_mem);
+			pageContext.forward("sendMail.jsp");
+
 		} else {
 			System.out.println("sendMail.jsp 이동 실패...");
 		}
@@ -90,15 +92,17 @@
 	} else if (action.equals("main")) {
 		if (session.getAttribute("UID") == null) {
 			System.out.println("session.getAttribute() null...");
-			response.sendRedirect("login.jsp");
+			pageContext.forward("login.jsp");
+			//response.sendRedirect("login.jsp");
 		} else {
-			response.sendRedirect("main.jsp");
+			pageContext.forward("main.jsp");
+			//response.sendRedirect("main.jsp");
 		}
 		//pageContext.forward("main.jsp");
 	} else if (action.equals("help")) { //도움말
 		pageContext.forward("help.jsp");
 	} else if (action.equals("kernel")) { //커널 분석
-		pageContext.forward("kernel.html");
+		pageContext.forward("Kernel.html");
 	}
 	else if (action.equals("searchFunction")) { //함수 검색
 		pageContext.forward("searchFunction.jsp");
