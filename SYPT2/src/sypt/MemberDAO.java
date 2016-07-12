@@ -130,7 +130,7 @@ public class MemberDAO {
 		return x;
 	}
 
-	// 아이디(이메일) 입력했을 때 사용자 정보 불러오기. 마이페이지 등에서 사용
+	// 아이디(이메일) 입력했을 때 사용자 정보 불러오기
 	public Member loadMemInfo(String id_mem) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -154,5 +154,31 @@ public class MemberDAO {
 			DBManager.close(conn, pstmt, rs);
 		}
 		return mem;
+	}
+	
+	
+	//마이페이지-비밀번호 수정
+	public int changeMemPassword(String newPassword, String id_mem, String oldPassword) throws SQLException {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int x = -1;
+		String sql = "update member set password=? where id_mem=? and password=?";
+		try {
+			conn = DBManager.getRemoteConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, newPassword);
+			pstmt.setString(2, id_mem);
+			pstmt.setString(3, oldPassword);
+			if(pstmt.executeUpdate() == 0){
+				x = 0;
+			} else{
+				x = 1;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, pstmt);
+		}
+		return x;
 	}
 }

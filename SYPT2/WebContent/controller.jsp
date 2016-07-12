@@ -30,8 +30,7 @@
 		int check = DAO.login(ID, password);
 		if (check == 1) {
 			session.setAttribute("UID", ID);
-			//response.sendRedirect("controller.jsp?action=main");
-			pageContext.forward("controller.jsp?action=main");
+			response.sendRedirect("controller.jsp?action=main");
 		} else {
 			flag++;
 			out.println("<script>alert('이메일 인증이 완료된 아이디와 비밀번호를 입력하세요.');");
@@ -103,13 +102,29 @@
 		pageContext.forward("help.jsp");
 	} else if (action.equals("kernel")) { //커널 분석
 		pageContext.forward("Kernel.html");
-	}
-	else if (action.equals("searchFunction")) { //함수 검색
+	} else if (action.equals("searchFunction")) { //함수 검색
 		pageContext.forward("searchFunction.jsp");
 	} else if (action.equals("mypage")) { //마이페이지
 		pageContext.forward("mypage.jsp");
 	
+	} else if(action.equals("pwcheck")){
+		String ID = request.getParameter("id_mem");
+		String oldPW = request.getParameter("oldPW");
+		String newPW = request.getParameter("newPW");
+		
+		if(DAO.changeMemPassword(newPW, ID, oldPW) == 1){
+			response.sendRedirect("controller.jsp?action=logout");
+		} else {
+			flag++;
+			out.println("<script>alert('비밀번호 변경을 실패했습니다.');");
+			out.println("history.go(-1);");
+			out.println("</script>");
+		}
+	
+	} else if (action.equals("changePW")){
+		pageContext.forward("changePW.jsp");
 	} else if (action.equals("logout")) {
+	
 		session.invalidate();
 		response.sendRedirect("main.jsp");
 	}

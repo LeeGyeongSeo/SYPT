@@ -32,20 +32,35 @@
 <title>SYPT - SYstem Programming Trainer</title>
 </head>
 <body>
+	<div class="container">
 
-	<h3><%=id_mem%>님 로그인되었습니다. 메인화면
-	</h3>
-	<a href="/sypt/errorless/kernel.jsp" class="btn btn-default"
-		role="button">커널분석</a>
-	<a href="/sypt/errorless/searchFunction.jsp" class="btn btn-default"
-		role="button">함수검색</a>
-	<!-- <a href="/sypt/errorless/quiz.jsp" class="btn btn-default" role="button">퀴즈</a>  -->
-	<a href="/sypt/errorless/help.jsp" class="btn btn-default"
-		role="button">도움말</a>
-	<a href="/sypt/errorless/mypage.jsp" class="btn btn-default"
-		role="button">마이페이지</a>
-	<form method="post" action="controller.jsp?action=logout">
-		<input type="submit" value="로그아웃">
+		<div class="btn-group btn-group-justified">
+			<div class="btn-group">
+			
+			<form method="post" action=controller.jsp?action=kernel>
+				<button type="submit" class="btn btn-primary">커널 분석</button>
+				</form>
+			</div>
+			<div class="btn-group"><form method="post" action=controller.jsp?action=searchFunction>
+				<button type="submit" class="btn btn-primary">함수 검색</button>
+				</form>
+			</div>
+			<div class="btn-group"><form method="post" action=controller.jsp?action=help>
+				<button type="submit" class="btn btn-primary">도움말</button>
+				</form>
+			</div>
+			<div class="btn-group"><form method="post" action=controller.jsp?action=mypage>
+				<button type="submit" class="btn btn-primary">마이페이지</button>
+				</form>
+			</div>
+			<div class="btn-group"><form method="post" action=controller.jsp?action=logout>
+				<button type="submit" class="btn btn-primary">로그아웃</button>
+				</form>
+			</div>
+		</div>
+		
+		<h3><%=id_mem%>님 로그인되었습니다~~~~~~~~~~ 메인화면 ~~~~</h3>
+	</div>
 </body>
 </html>
 <%}%>

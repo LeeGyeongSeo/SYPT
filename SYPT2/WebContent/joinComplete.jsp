@@ -27,8 +27,9 @@
 <body>
 <div class="container">
 	<h1>회원가입이 완료되었습니다.</h1>
-	<br>
-<!-- 로그인페이지로 가거나 창 닫기 추가? -->
+	<input type="button" value="창닫기" onclick="self.close()">
+	<!-- <button class="close" type="button">창닫기</button> -->
+	
 </div>
 </body>
 </html>

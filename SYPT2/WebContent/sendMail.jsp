@@ -70,11 +70,15 @@
     {
         // Create a Properties object to contain connection configuration information.
     	Properties props = System.getProperties();
-    	props.put("mail.transport.protocol", "smtp");
+    	props.put("mail.transport.protocol", "smtps");
     	props.put("mail.smtp.port", 465); 
     	props.put("mail.smtp.auth", "true");
     	props.put("mail.smtp.starttls.enable", "true");
     	props.put("mail.smtp.starttls.required", "true");
+    	props.put("mail.smtp.ssl.enable", "true");
+	    props.put("mail.smtp.socketFactory.port", "465");
+	    props.put("mail.smtp.socketFactory.class",
+	                     "javax.net.ssl.SSLSocketFactory");
 
         // Create a Session object to represent a mail session with the specified properties. 
     	Session sess = Session.getDefaultInstance(props);
@@ -84,16 +88,20 @@
         msg.setFrom(new InternetAddress(FROM));
         msg.setRecipient(Message.RecipientType.TO, new InternetAddress(TO));
         msg.setSubject("SYPT test mail");
-        msg.setContent("If you clicke the url, authentication success!", "text/plain");
+        msg.setContent("If you enter the link, authentication success! "+url, "text/plain");
             
         // Create a transport.        
         Transport transport = sess.getTransport();
+        transport.connect(HOST, SMTP_USERNAME, SMTP_PASSWORD);
         transport.sendMessage(msg, msg.getAllRecipients());
     } catch (Exception ex) {
     	System.out.println("Error message: " + ex.getMessage());
+		out.println("<script>alert('이메일 전송을 실패했습니다.');");
+		out.println("history.go(-1);");
+		out.println("</script>");
     } finally {
-    	out.println("<script>alert('메일이 전송되었습니다.\\n이메일 확인 후 가입이 완료됩니다.');<script>");
+		out.println("<script>alert('메일이 전송되었습니다.\\n이메일 확인 후 가입이 완료됩니다.');");
+		out.println("</script>");
     }
-    
    pageContext.forward("login.jsp");
 %>
