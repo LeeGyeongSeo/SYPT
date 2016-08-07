@@ -90,7 +90,6 @@
 
 	} else if (action.equals("main")) {
 		if (session.getAttribute("UID") == null) {
-			System.out.println("session.getAttribute() null...");
 			pageContext.forward("login.jsp");
 			//response.sendRedirect("login.jsp");
 		} else {

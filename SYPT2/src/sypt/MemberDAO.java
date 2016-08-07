@@ -157,7 +157,7 @@ public class MemberDAO {
 	}
 	
 	
-	//마이페이지-비밀번호 수정
+	// 마이페이지-비밀번호 수정
 	public int changeMemPassword(String newPassword, String id_mem, String oldPassword) throws SQLException {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -181,4 +181,5 @@ public class MemberDAO {
 		}
 		return x;
 	}
+
 }

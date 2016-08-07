@@ -1,12 +1,3 @@
-kthread_create()
-<br>
-<br>
-목적 : 쓰레드 생성
-<br>
-<br>
-헤더파일 : linux/ktrhead.h
-<br>
-<br>
-원형 : struct task_struct *kthread_create(int (*threadfn)(void * data), 
-<br>       void *data, 
-<br>   const char namefmt[], ...)
+include <linux/ktrhead.h>
+
+struct task_struct *kthread_create(int (*threadfn)(void * data), void *data, const char namefmt[], ...)
