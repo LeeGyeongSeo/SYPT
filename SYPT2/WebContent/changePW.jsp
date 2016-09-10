@@ -10,25 +10,7 @@
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-	crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
-	crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-	crossorigin="anonymous"></script>
+<head><jsp:include page="include/header.jsp"/>
 
 <script type="text/javascript">
 	function checkIt() {
@@ -53,33 +35,56 @@
 		return true;
 	}
 </script>
-
-<title>SYPT - 비밀번호 변경</title>
 </head>
 <body>
-	<center>
-		<div class="container">
-			<form name=userinput method="post" action=controller.jsp?action=pwcheck onSubmit="return checkIt()">
-				<div class="form-group">
-					<label for="exampleInputPassword1">현재 비밀번호</label> <input
-						type="password" name="oldPW" class="form-control"
-						id="exampleInputPassword1" placeholder="Password"> <input
-						type="hidden" name="id_mem" value="<%=id_mem%>">
-				</div>
-				<div class="form-group">
-					<label for="exampleInputPassword1">새 비밀번호</label> <input
-						type="password" name="newPW" class="form-control"
-						id="exampleInputPassword1" placeholder="New Password">
-				</div>
-				<div class="form-group">
-					<label for="exampleInputPassword1">새 비밀번호 확인</label> <input
-						type="password" name="newPW2" class="form-control"
-						id="exampleInputPassword1" placeholder="New Password">
-				</div>
-				<button type="submit" class="btn btn-default">변경</button>
-			</form>
+<div id="page-wrapper">
+
+	<!-- Header -->
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><h1 id="logo">SYPT</a></h1></li>
+						<li><a class="icon fa-home" href="/controller.jsp?action=main"><span>메인</span></a></li>
+						<li><a class="icon fa-sitemap" href="/controller.jsp?action=kernel"><span>커널분석기</span></a></li>
+						<li><a class="icon fa-cog" href="/controller.jsp?action=mypage"><span>마이페이지</span></a></li>
+						<li><a class="icon fa-sign-out" href="/controller.jsp?action=logout"><span>로그아웃</span></a></li>
+					</ul>
+				</nav>
+
 		</div>
-	</center>
+	</div>
+
+	<!-- Main -->
+	<div id="main-wrapper">
+		<div id="main" class="container">
+
+			<form name=userinput method="post" action=controller.jsp?action=pwcheck onSubmit="return checkIt()" style="text-align: center;">
+				<div class="form-group">
+					<label for="exampleInputPassword1">현재 비밀번호</label> 
+					<input type="password" name="oldPW"
+						id="exampleInputPassword1" placeholder="Password"> 
+					<input type="hidden" name="id_mem" value="Current Password">
+				</div><br>
+				<div class="form-group">
+					<label for="exampleInputPassword1">새 비밀번호</label> 
+					<input type="password" name="newPW"
+						id="exampleInputPassword1" placeholder="New Password">
+				</div><br>
+				<div class="form-group">
+					<label for="exampleInputPassword1">새 비밀번호 확인</label> 
+					<input type="password" name="newPW2"
+						id="exampleInputPassword1" placeholder="New Password">
+				</div><br>
+				<button type="submit" class="button icon fa-pencil">변경</button>
+			</form>
+
+		</div>
+	</div>
+	<jsp:include page="include/footer.jsp"/>
+</div>
 </body>
 </html>
+
 <%}%>

@@ -15,11 +15,9 @@
 
 	if (action.equals("login")) { //아예 사용 X임 로그인은 loginCheck에서 하고 바로 main으로 ㄱㄱ
 		if (session.getAttribute("UID") == null) {
-			System.out.println("session.getAttribute() null!!!!!!!!!!");
 			pageContext.forward("login.jsp");
 			//response.sendRedirect("login.jsp");
 		} else {
-			System.out.println("session.getAttribute() not null...");
 			pageContext.forward("main.jsp");
 			//response.sendRedirect("main.jsp");
 		}
@@ -40,14 +38,12 @@
 
 
 	} else if (action.equals("idcheck")) {
-
 		pageContext.forward("idcheck.jsp");
 	} else if (action.equals("join")) { //회원 가입
 		pageContext.forward("join.jsp");
 	} else if (action.equals("sendMail")) { //회원 가입
 		pageContext.forward("sendMail.jsp");
 	} else if (action.equals("joinCheck")) {
-
 		String id_mem = request.getParameter("id_mem");
 		String password = request.getParameter("password");
 		String password2 = request.getParameter("password2");
@@ -97,12 +93,8 @@
 			//response.sendRedirect("main.jsp");
 		}
 		//pageContext.forward("main.jsp");
-	} else if (action.equals("help")) { //도움말
-		pageContext.forward("help.jsp");
 	} else if (action.equals("kernel")) { //커널 분석
-		pageContext.forward("Kernel.html");
-	} else if (action.equals("searchFunction")) { //함수 검색
-		pageContext.forward("searchFunction.jsp");
+		pageContext.forward("kernel.jsp");
 	} else if (action.equals("mypage")) { //마이페이지
 		pageContext.forward("mypage.jsp");
 	

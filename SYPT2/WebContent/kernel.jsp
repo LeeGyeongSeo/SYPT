@@ -42,31 +42,8 @@
 	<!-- Main -->
 	<div id="main-wrapper">
 		<div id="main" class="container" style="text-align: center;">
-			<head><h1>마이페이지</h1><br/></head>
-			<table class="alignCenter">
-			  <tbody>
-			    <tr>
-			      <th scope="row">ID</th>
-			      <td><%=id_mem %></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">이름</th>
-			      <td><%=member.getName_mem()%></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">성별</th>
-			      <td><%=member.getGender() %></td>
-			    </tr>
-			    <tr>
-			      <th scope="row">생일</th>
-			      <td><%=member.getBirthday() %></td>
-			    </tr>
-			  </tbody>
-			</table>
-			<form method="post" action=controller.jsp?action=changePW>
-				<input type="submit" class="button icon fa-pencil" value="비밀번호 수정">
-			</form>
-
+			<head><h1>커널분석기</h1><br/></head>
+			
 		</div>
 	</div>
 	

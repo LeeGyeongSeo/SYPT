@@ -3,26 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-	crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
-	crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-	crossorigin="anonymous"></script>
-
+<jsp:include page="include/header.jsp"/>
 <script type="text/javascript">
     function checkIt(){    
         var userinput = document.userinput;
@@ -63,70 +44,82 @@
     }
 </script>
 
-<title>Join</title>
-
 </head>
-<body>
-	<center>
-		<br>
-		<h1>회원가입</h1>
-	</center>
-	<div class="container">
-		<form class="form-horizontal" name=userinput method="post"
-			action=controller.jsp?action=joinCheck onSubmit="return checkIt()">
-			<div class="form-group">
-				<label for="inputEmail3" class="col-md-3 control-label">이메일</label>
-				<div class="col-md-5">
-					<input type="email" class="form-control" id="exampleInputEmail1"
-						placeholder="Email" name="id_mem">
-				</div>
-				<input class="btn btn-default" type="button" name="confirm_id" value="중복확인" onClick="openConfirmid(this.form)">
+<body class="homepage">
+	<div id="page-wrapper">
+
+	<!-- Header -->
+		<div id="login-header-wrapper">
+			<div id="login-header" class="container">
+
+			<!-- Logo -->
+				<h1 id="logo">SYPT</a></h1>
+				<p><b>SYSTEM PROGRAMMING TRAINER</b><br>
+				 MANUFACTURED BY TEAM ERRORLESS</p>
 
 			</div>
-			<div class="form-group">
-				<label for="inputPassword3" class="col-md-3 control-label">비밀번호</label>
-				<div class="col-md-5">
-					<input type="password" class="form-control" name="password"
-						id="exampleInputPassword1" placeholder="Password" maxlength="45">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="inputPassword3" class="col-md-3 control-label">비밀번호 확인</label>
-				<div class="col-md-5">
-					<input type="password" class="form-control" name="password2"
-						id="exampleInputPassword1" placeholder="Password" maxlength="45">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-3 control-label">이름</label>
-				<div class="col-md-5">
-					<input type="text" class="form-control" name="name_mem"
-						id="exampleInputName" maxlength="20">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-3 control-label">성별</label>
-				<div class="radio col-md-5">
-					<label class="col-md-2"> <input type="radio" name="gender"
-						id="genderMale" value="male" checked> 남자 </label> 
-					<label class="col-md-3"> <input type="radio" name="gender"
-						id="genderFemale" value="female"> 여자 </label>
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-3 control-label">생년월일</label>
-				<div class="col-md-5" data-date-format="yyyy-mm-dd">
-					<input type="date" class="form-control" name="birthday">
-				</div>
-			</div>
+		</div>
 
-			<div class="form-group">
-				<div class="col-sm-offset-3 col-sm-9">
-					<button type="submit" class="btn btn-default">회원가입</button>
-					<input class="btn btn-default" type=reset value="초기화">
-				</div>
-			</div>
-		</form>
+	<!-- Features -->
+		<div id="features-wrapper">
+			<section id="features" class="container" align="center">
+				<header><h2>JOIN</h2></header>
+					<form name=userinput method="post"
+						action=controller.jsp?action=joinCheck onSubmit="return checkIt()">
+
+						<div class="form-group">
+							<label for="exampleInputEmail1">이메일</label>
+							<input type="email" id="exampleInputEmail1" placeholder="Email" name="id_mem">
+							<button class="fa fa-check" name="confirm_id"></button>
+			
+						</div><br>
+						<div class="form-group">
+							<label for="exampleInputPassword1">비밀번호</label>
+
+								<input type="password" name="password"
+									id="exampleInputPassword1" placeholder="Password" maxlength="45">
+
+						</div><br>
+						<div class="form-group">
+							<label for="exampleInputPassword2">비밀번호 확인</label>
+
+								<input type="password" name="password2"
+									id="exampleInputPassword2" placeholder="Password" maxlength="45">
+
+						</div><br>
+						<div class="form-group">
+							<label>이름</label>
+
+								<input type="text" name="name_mem"
+									id="exampleInputName" maxlength="20">
+
+						</div><br>
+						<div class="form-group">
+							<label>성별</label>
+							<div class="radio">
+								<input type="radio" name="gender"
+									id="genderMale" value="male" checked> 남자
+								<input type="radio" name="gender"
+									id="genderFemale" value="female"> 여자 
+							</div>
+						</div><br>
+						<div class="form-group">
+							<label>생년월일</label>
+							<div data-date-format="yyyy-mm-dd">
+								<input type="date" class="form-control" name="birthday">
+							</div>
+						</div><br>
+	
+						<ul class="actions">
+							<li><input type="submit" class="fa fa-sign-in" value="회원가입"></li>
+							<li><input class="fa fa-file-text-o" type="reset" value="초기화"></li>
+						</ul>
+					</form>
+				
+
+			</section>
+		</div>
 	</div>
+
 </body>
 </html>

@@ -19,7 +19,7 @@ public class FunctionDAO {
 		try {
 			conn = DBManager.getRemoteConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, name_func+"%");
+			pstmt.setString(1, "%" + name_func + "%");
 			rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
