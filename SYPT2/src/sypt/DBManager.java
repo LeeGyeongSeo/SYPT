@@ -25,7 +25,6 @@ public class DBManager {
 	      //logger.trace("Getting remote connection with connection string from environment variables.");
 	      //conn = DriverManager.getConnection(jdbcUrl);
 	      conn = DriverManager.getConnection(jdbcUrl, userName, password);
-	      System.out.println("Remote Connection successful.");
 	      
 	      return conn;
 	    }
