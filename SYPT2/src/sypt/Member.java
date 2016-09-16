@@ -10,7 +10,6 @@ public class Member {
 	private String register_date;
 	private String uuid;
 	private int auth_state;
-	
 	public Member()
 	{
 		

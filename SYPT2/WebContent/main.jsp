@@ -1,38 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-	import="java.util.*, javax.swing.*, javax.servlet.jsp.*, sypt.*, java.net.ServerSocket,
-	java.net.Socket, java.io.*"%>
-<!-- 	<script type="text/javascript"> -->
-<%-- var temp = [];
-<%for(int i=0; i<result.length; i++){ %>
-temp.push("<%=result[i]%>" + "\n");
-<%}%>--%>
-<%-- 
-$('#textbox').keyup(function(event) {
-	
-	<%ArrayList<Function> funs = new ArrayList<Function>();
-				funs = FDAO.searchFunction(searchInput);
-				String[] result = new String[funs.size()];
-				for (int i = 0; i < funs.size(); i++) {
-					result[i] = funs.get(i).getName_func();
-				}%>
-	var temp = [];
-	<%for (int i = 0; i < result.length; i++) {%>
-	temp.push("<%=result[i]%>" + "\n");
-	<%}%>
-
-	$('#searchFunc').empty();
-	$.each(temp, function(index, value) {
-		$('#searchFunc').append(value);
-
-	});
-});
-</script> --%>
-
-<jsp:useBean id="func" scope="session" class="sypt.Function" />
-<jsp:setProperty name="func" property="*" />
-<jsp:useBean id="FDAO" scope="session" class="sypt.FunctionDAO" />
-<jsp:setProperty name="FDAO" property="*" />
+    import="java.io.*, sypt.*"%>
+<jsp:useBean id="Input" scope="session" class="sypt.SearchInput" />
+<jsp:setProperty name="Input" property="*" />
 <%
 	request.setCharacterEncoding("utf-8");
 	String id_mem = (String) session.getAttribute("UID");
@@ -41,12 +11,6 @@ $('#textbox').keyup(function(event) {
 		response.sendRedirect("login.jsp");
 	} else {
 
-    	/* ArrayList<Function> funs = new ArrayList<Function>();
-		funs = FDAO.searchFunction(searchInput);
-		String[] result = new String[funs.size()];
-		for (int i = 0; i < funs.size(); i++) {
-			result[i] = funs.get(i).getName_func();
-		} */
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -61,7 +25,7 @@ $('#textbox').keyup(function(event) {
 					<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><h1 id="logo">SYPT</a></h1></li>
+							<li><h1 id="logo">SYPT</h1></li>
 							<li><a class="icon fa-home" href="/controller.jsp?action=main"><span>메인</span></a></li>
 							<li><a class="icon fa-sitemap" href="/controller.jsp?action=kernel"><span>커널분석기</span></a></li>
 							<li><a class="icon fa-cog" href="/controller.jsp?action=mypage"><span>마이페이지</span></a></li>
@@ -92,7 +56,7 @@ $('#textbox').keyup(function(event) {
 								<ul class="divided">
 									<li>
 										<input id="textbox" type="text"> 
-										<button onClick="cleartext();" class="fa fa-trash-o">Clear</button>
+										<!-- <button onClick="cleartext();" class="fa fa-trash-o">Clear</button> -->
 									</li>
 									<li><textarea id="searchFunc" rows="15" cols="48" readOnly></textarea></li>
 								</ul>
@@ -106,33 +70,35 @@ $('#textbox').keyup(function(event) {
 
 </body>
 <script type="text/javascript">
-	function cleartext() {
-		document.getElementById("textbox").value = "";
+$(document).ready(function() {
+	function ajaxJsonCall() {
+        $.ajax({
+            type: 'GET',
+            url: 'requestJSON.jsp',
+            success: function(data) {
+            	document.getElementById("textbox").value = $.trim(data);
+            	setTimeout(ajaxJsonCall, 1000);
+            	if($.trim(data) != <%=Input.getInput()%>){
+            		ajaxFunctionCall($.trim(data));
+            	}
+            }
+        });
 	}
-
-	$(document).ready(function() {
-		function ajaxCall() {
-	        $.ajax({
-	            type: 'GET',
-	            url: 'requestJSON.jsp',
-	            //dataType: 'json',
-	            cache: 'false',
-	            success: function(data) {
-	            	$('#searchFunc').load('requestJSON.jsp');
-	            	//$('#searchFunc').append(data.sendString);
-	            	
-	            },
-	            error: function(err) {
-	            	$('#searchFunc').append('fail');
-	            }
-	        }) .then(function(data) {
-	        	ajaxCall();
-	        });
-		}
-		setTimeout(ajaxCall, 1000);
-		
-	});
-
+	
+	function ajaxFunctionCall(str) {
+        $.ajax({
+            type: 'GET',
+            data: {param: str},
+            url: 'requestFunction.jsp',
+            success: function(data) {
+             	$('#searchFunc').empty();
+	            $('#searchFunc').html(data);
+				
+            }
+        });
+	}
+	ajaxJsonCall();
+});
 </script>
 </html>
 <%}%>

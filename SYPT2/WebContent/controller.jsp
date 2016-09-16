@@ -117,6 +117,6 @@
 	} else if (action.equals("logout")) {
 	
 		session.invalidate();
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("login.jsp");
 	}
 %>
