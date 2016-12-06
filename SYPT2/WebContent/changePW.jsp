@@ -46,7 +46,7 @@
 				<nav id="nav">
 					<ul>
 						<li><h1 id="logo">SYPT</h1></li>
-						<li><a class="icon fa-home" href="/controller.jsp?action=main"><span>메인</span></a></li>
+						<li><a class="icon fa-home" href="/main.jsp"><span>메인</span></a></li>
 						<li><a class="icon fa-sitemap" href="/controller.jsp?action=kernel"><span>커널분석기</span></a></li>
 						<li><a class="icon fa-cog" href="/controller.jsp?action=mypage"><span>마이페이지</span></a></li>
 						<li><a class="icon fa-sign-out" href="/controller.jsp?action=logout"><span>로그아웃</span></a></li>
@@ -64,8 +64,8 @@
 				<div class="form-group">
 					<label for="exampleInputPassword1">현재 비밀번호</label> 
 					<input type="password" name="oldPW"
-						id="exampleInputPassword1" placeholder="Password"> 
-					<input type="hidden" name="id_mem" value="Current Password">
+						id="exampleInputPassword1" placeholder="Password"> <!-- 
+					<input type="hidden" name="id_mem" value="Current Password"> -->
 				</div><br>
 				<div class="form-group">
 					<label for="exampleInputPassword1">새 비밀번호</label> 

@@ -13,7 +13,7 @@
 	int flag = 0;
 	String action = request.getParameter("action");
 
-	if (action.equals("login")) { //아예 사용 X임 로그인은 loginCheck에서 하고 바로 main으로 ㄱㄱ
+	if (action.equals("login")) { //로그인은 loginCheck에서 하고 바로 main으로
 		if (session.getAttribute("UID") == null) {
 			pageContext.forward("login.jsp");
 			//response.sendRedirect("login.jsp");
@@ -31,7 +31,7 @@
 			response.sendRedirect("controller.jsp?action=main");
 		} else {
 			flag++;
-			out.println("<script>alert('이메일 인증이 완료된 아이디와 비밀번호를 입력하세요.');");
+			out.println("<script>alert('아이디와 비밀번호를 확인하세요.');");
 			out.println("history.go(-1);");
 			out.println("</script>");
 		}
@@ -41,7 +41,7 @@
 		pageContext.forward("idcheck.jsp");
 	} else if (action.equals("join")) { //회원 가입
 		pageContext.forward("join.jsp");
-	} else if (action.equals("sendMail")) { //회원 가입
+	} else if (action.equals("sendMail")) { //회원 가입-이메일 전송
 		pageContext.forward("sendMail.jsp");
 	} else if (action.equals("joinCheck")) {
 		String id_mem = request.getParameter("id_mem");
@@ -63,7 +63,7 @@
 		newDB.setUuid(UUID.randomUUID().toString().substring(0, 19));
 
 		if (DAO.insertMemInfo(newDB)) {
-			//url에 메일주소 다 드러나니까ㅠㅜㅜ수정해야됨 forward-setAttribute ㄴㄴ
+			//url에 메일주소 다 드러나니까ㅠㅜㅜ수정 필요 forward-setAttribute ㄴㄴ
 			//response.sendRedirect("sendMail.jsp?toEmail=" + id_mem);
 			request.setAttribute("toEmail", id_mem);
 			pageContext.forward("sendMail.jsp");
@@ -99,11 +99,13 @@
 		pageContext.forward("mypage.jsp");
 	
 	} else if(action.equals("pwcheck")){
-		String ID = request.getParameter("id_mem");
+		String ID = session.getAttribute("UID").toString();
 		String oldPW = request.getParameter("oldPW");
 		String newPW = request.getParameter("newPW");
-		
-		if(DAO.changeMemPassword(newPW, ID, oldPW) == 1){
+		int result = DAO.changeMemPassword(newPW, ID, oldPW);
+		System.out.println("Change PW result: " + result);
+		if(result == 1){			
+			out.println("<script>alert('비밀번호 변경이 완료되었습니다.');</script>");
 			response.sendRedirect("controller.jsp?action=logout");
 		} else {
 			flag++;

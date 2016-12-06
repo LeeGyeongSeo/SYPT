@@ -35,9 +35,9 @@
         return true;
     }
     //아이디 중복 여부를 판단
-    function openConfirmid(userinput){
+    function openConfirmid(){
         //url과 사용자 입력 id를 조합합니다.
-        url = "idcheck.jsp?id=" + userinput.id_mem.value;
+        url = "idcheck.jsp?id=" + document.userinput.id_mem.value;
         
         //새로운 윈도우를 엽니다.
         open(url,"confirm","toolbar=no,location=no,status=no,menubar=no,scrllbar=no,resizable=no,width=300,height=200");
@@ -70,7 +70,7 @@
 						<div class="form-group">
 							<label for="exampleInputEmail1">이메일</label>
 							<input type="email" id="exampleInputEmail1" placeholder="Email" name="id_mem">
-							<button class="fa fa-check" name="confirm_id"></button>
+							<input type="button" onclick="openConfirmid()" class="fa fa-check" value="중복확인">
 			
 						</div><br>
 						<div class="form-group">
